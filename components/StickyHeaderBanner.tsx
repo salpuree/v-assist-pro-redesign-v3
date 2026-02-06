@@ -57,7 +57,7 @@ const StickyHeaderBanner: React.FC<StickyHeaderBannerProps> = ({ isDarkMode, onO
         </div>
 
         {/* Right side content with border-b that starts AFTER the sidebar */}
-        <div className="flex-1 flex items-center justify-end h-full border-b border-themed px-0">
+        <div className="flex-1 flex items-center justify-end h-full px-0">
           {/* Right Area - Waitlist & Join */}
           <div className="flex items-center gap-4 xl:gap-8 text-themed-tertiary text-sm flex-shrink-0 font-sans">
             <div className="hidden md:flex items-center gap-2">

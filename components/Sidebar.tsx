@@ -19,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isMenuOpen, setIsMenuOpen, isDarkMode
       <aside className="fixed left-0 top-0 h-screen w-16 md:w-20 flex flex-col justify-between items-center py-8 transition-all duration-500 overflow-hidden z-[60]">
 
         {/* Liquid Glass Background Layer - Enhanced for Light Mode Visibility */}
-        <div className="absolute inset-0 bg-cream/95 dark:bg-dark/95 backdrop-blur-md border-r border-themed z-0 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-cream/95 dark:bg-dark/95 backdrop-blur-md z-0 transition-colors duration-500" />
 
         {/* Animated Liquid Core - Optimized for Dark Mode Glow & Light Mode Presence */}
         <motion.div

@@ -17,6 +17,7 @@ import ExitIntentPopup from './components/ExitIntentPopup';
 import LogoCarousel from './components/LogoCarousel';
 import LocationDetail from './components/LocationDetail';
 import StickyHeaderBanner from './components/StickyHeaderBanner';
+import FrameConnector from './components/FrameConnector';
 import MobileHeader from './components/MobileHeader';
 import { AnimatePresence } from 'framer-motion';
 import { useDeviceDetection } from './hooks/useDeviceDetection';
@@ -72,6 +73,7 @@ const App: React.FC = () => {
   return (
     <div className="bg-cream dark:bg-dark min-h-screen transition-colors duration-500 relative">
       <StickyHeaderBanner isDarkMode={isDarkMode} onOpenProtocol={handleOpenProtocol} />
+      <FrameConnector />
 
       {isMobile ? (
         <MobileSidebar
