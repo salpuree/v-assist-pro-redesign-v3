@@ -134,8 +134,8 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
                       <Coffee size={20} className="text-accent mb-4" />
                       <h4 className="text-[11px] font-bold uppercase tracking-widest mb-2 text-themed">Bespoke Audit</h4>
                       <p className="text-[11px] text-themed-tertiary uppercase leading-relaxed font-sans">We map your business rhythm, not a template.</p>
-                        </div>
-                      </fieldset>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Form Side (Right) */}
