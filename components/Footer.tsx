@@ -156,7 +156,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
             </div>
           </div>
 
-          <p className="text-center">© 2024 V Assist Pro Inc. • Professional Discretion Guaranteed</p>
+          <p className="text-center">© {new Date().getFullYear()} V Assist Pro Inc. • Professional Discretion Guaranteed</p>
 
           <div className="flex gap-8">
             <a href="#" className="hover:text-accent transition-colors">Privacy Protocol</a>

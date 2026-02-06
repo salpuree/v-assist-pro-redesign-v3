@@ -4,90 +4,22 @@ import { ArrowRight, Lock, Activity, Sparkles, ShieldCheck, Download } from 'luc
 import LeadMagnetGuide from './LeadMagnetGuide';
 
 const heroStyles = `
-  .hero-title {
-    font-family: "Playfair Display", serif;
-  }
-
   @keyframes wave-flow-1 {
-    0% {
-      transform: translateX(-100%) translateY(0);
-    }
-    100% {
-      transform: translateX(100%) translateY(0);
-    }
+    0% { transform: translateX(-100%) translateY(0); }
+    100% { transform: translateX(100%) translateY(0); }
   }
-
   @keyframes wave-flow-2 {
-    0% {
-      transform: translateX(100%) translateY(0);
-    }
-    100% {
-      transform: translateX(-100%) translateY(0);
-    }
+    0% { transform: translateX(100%) translateY(0); }
+    100% { transform: translateX(-100%) translateY(0); }
   }
-
   @keyframes wave-float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
   }
-
-  .wave-container {
-    animation: wave-float 8s ease-in-out infinite;
-  }
-
-  .wave-path-1 {
-    animation: wave-flow-1 12s linear infinite;
-  }
-
-  .wave-path-2 {
-    animation: wave-flow-2 15s linear infinite;
-  }
-
-  .wave-path-3 {
-    animation: wave-flow-1 18s linear infinite;
-    animation-delay: 3s;
-  }
-
-  @media (max-width: 991px) {
-    .hero-uninterrupted {
-      color: #1c90be;
-    }
-    .hero-description {
-      color: inherit;
-    }
-  }
-
-  /* Light mode fixes */
-  .light .hero-title {
-    color: #111827 !important;
-  }
-
-  .light .hero-uninterrupted {
-    color: #19abe4 !important;
-  }
-
-  .light .hero-description {
-    color: #111827 !important;
-  }
-
-  /* Light mode fixes for the floating onboarding card */
-  .light {
-    --tw-text-opacity: 1;
-  }
-
-  .light .text-white\/30,
-  .light .text-white\/40,
-  .light .text-white\/50 {
-    color: rgba(17, 24, 39, 0.85) !important;
-  }
-
-  .light .border-white\/10 {
-    border-color: rgba(17, 24, 39, 0.15) !important;
-  }
+  .wave-container { animation: wave-float 8s ease-in-out infinite; }
+  .wave-path-1 { animation: wave-flow-1 12s linear infinite; }
+  .wave-path-2 { animation: wave-flow-2 15s linear infinite; }
+  .wave-path-3 { animation: wave-flow-1 18s linear infinite; animation-delay: 3s; }
 `;
 
 interface HeroProps {
@@ -104,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col bg-cream dark:bg-dark transition-colors duration-500 pb-20 md:pb-0 overflow-hidden min-h-[100vh]" id="home">
+    <section className="relative min-h-screen flex flex-col bg-cream dark:bg-dark transition-colors duration-500 pb-20 md:pb-0 overflow-hidden" id="home">
       {/* Premium Background - Breathing Dot Grid & Gradient Orbs (Covering entire section) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Base gradient layer */}
@@ -218,17 +150,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="flex items-center" style={{ gap: 'var(--sp-xl)', marginBottom: 'var(--sp-lg)' }}>
-                  <Sparkles size={16} className="animate-pulse" style={{ color: 'var(--color-accent)' }} />
+                <div className="flex items-center gap-6 mb-4">
+                  <Sparkles size={16} className="animate-pulse text-accent" />
                   <div className="h-[1px] w-12 bg-accent/30"></div>
-                  <span style={{ letterSpacing: '3px', fontSize: '11px', fontWeight: '700', color: '#17aee7', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase' }}>Customer Communications & Executive Operations, Handled</span>
+                  <span className="tracking-[3px] text-[11px] font-bold text-accent font-sans uppercase">Customer Communications & Executive Operations, Handled</span>
                 </div>
 
-                <h1 className="font-serif text-gray-900 dark:text-cream hero-title">
-                  <p style={{ font: '600 115px/115px Playfair Display, serif', letterSpacing: '-4px' }}>Your focus,</p>
-                  <div className="italic block hero-uninterrupted">
-                    <p><span style={{ font: '600 100px/72px Playfair Display, serif', letterSpacing: '-4px', color: 'var(--color-accent)' }}>Uninterrupted.</span></p>
-                  </div>
+                <h1 className="font-serif text-themed">
+                  <span className="block text-7xl lg:text-[115px] lg:leading-[115px] font-semibold tracking-tighter">Your focus,</span>
+                  <span className="block italic text-accent text-6xl lg:text-[100px] lg:leading-[72px] font-semibold tracking-tighter">Uninterrupted.</span>
                 </h1>
               </motion.div>
 
@@ -236,11 +166,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="lg:max-w-2xl"
-                style={{ paddingLeft: 'var(--sp-4xl)', marginTop: 'var(--sp-3xl)', borderLeft: '0.2px solid rgba(25, 171, 228, 0.8)' }}
+                className="lg:max-w-2xl pl-12 mt-10 border-l border-accent/80"
               >
-                <div className="hero-description text-gray-900 dark:text-white" style={{ fontFamily: 'Lato, sans-serif', fontSize: '20px', fontWeight: '400', lineHeight: '28px', marginBottom: '48px' }}>
-                  <div style={{ fontWeight: '400' }}>
+                <div className="text-themed-secondary font-sans text-xl leading-7 mb-12">
+                  <div>
                     <p className="mb-4">
                       Whether you run a limo fleet, manage a family office, or close million-dollar deals, one problem persists: <span className="font-semibold italic">operational noise drowns out what matters.</span>
                     </p>
@@ -269,15 +198,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                     </button>
 
                     {/* Trust Indicators */}
-                    <div className="flex items-center gap-4 px-2 text-gray-600 dark:text-cream/50">
+                    <div className="flex items-center gap-4 px-2 text-themed-tertiary">
                       <div className="flex items-center gap-1.5">
                         <ShieldCheck size={12} className="text-accent" />
-                        <span className="text-[10px] uppercase tracking-wider font-bold">100% Confidential</span>
+                        <span className="text-[11px] uppercase tracking-wider font-bold">100% Confidential</span>
                       </div>
-                      <div className="w-1 h-1 bg-gray-300 dark:bg-white/20 rounded-full" />
+                      <div className="w-1 h-1 bg-themed-faint rounded-full" />
                       <div className="flex items-center gap-1.5">
                         <Lock size={12} className="text-accent" />
-                        <span className="text-[10px] uppercase tracking-wider font-bold">30-Day Guarantee</span>
+                        <span className="text-[11px] uppercase tracking-wider font-bold">30-Day Guarantee</span>
                       </div>
                     </div>
                   </div>
@@ -303,10 +232,9 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
-                className="bg-white/95 dark:bg-charcoal/80 backdrop-blur-3xl border border-gray-300 dark:border-white/5 shadow-[0_20px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_40px_80px_rgba(0,0,0,0.15)] relative z-10 group rounded-xl"
-                style={{ padding: "30px 40px", marginTop: "7px" }}
+                className="bg-themed-secondary backdrop-blur-3xl border border-themed rounded-xl shadow-themed-card relative z-10 group p-8 mt-2"
               >
-                <div className="absolute -top-6 -right-6 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform" style={{ backgroundColor: 'var(--color-accent)' }}>
+                <div className="absolute -top-6 -right-6 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform bg-accent">
                   <Activity size={20} className="animate-pulse" />
                 </div>
 
@@ -314,13 +242,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all">
                     <ShieldCheck size={35} />
                   </div>
-                  <div className="text-gray-900 dark:text-white" style={{ fontWeight: '500' }}>
-                    <h4 className="text-gray-900 dark:text-white" style={{ marginBottom: '12px', font: 'italic 600 20px/28px Lato, sans-serif' }}>Human Intelligence</h4>
-                    <div className="text-gray-800 dark:text-white" style={{ font: '500 17px/19.5px Lato, sans-serif' }}>
-                      <p style={{ fontWeight: '400', lineHeight: '20.5px', fontSize: '18px' }}>
-                        We are a boutique firm of people, not software. We learn your voice and preferences, and the rhythm of your business.
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="text-themed mb-3 font-sans text-xl font-semibold italic">Human Intelligence</h4>
+                    <p className="text-themed-secondary font-sans text-lg leading-relaxed">
+                      We are a boutique firm of people, not software. We learn your voice and preferences, and the rhythm of your business.
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -330,13 +256,13 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
         </div>
       </div>
 
-      {/* Floating Onboarding Protocol - Restored Premium Design */}
-      < div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-30 hidden md:flex" >
+      {/* Floating Onboarding Protocol */}
+      <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-30 hidden md:flex">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center gap-12 px-12 py-6 rounded-3xl bg-white/5 dark:bg-dark/10 border border-white/10 dark:border-white/5 backdrop-blur-2xl shadow-[0_30px_60px_rgba(0,0,0,0.3)]"
+          className="glass-panel flex items-center gap-12 px-12 py-6 rounded-3xl shadow-themed-elevated"
         >
           {[
             { label: 'Secure Slot', status: 'Current' },
@@ -345,21 +271,21 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
           ].map((step, i) => (
             <React.Fragment key={step.label}>
               <div className="flex items-center gap-4 group cursor-pointer">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold border transition-all duration-500 ${i === 0 ? 'bg-accent border-accent text-white shadow-[0_0_25px_rgba(25,171,228,0.5)] scale-110' : 'border-white/10 text-white/40 group-hover:border-white/30 group-hover:text-white/60'}`}>
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold border transition-all duration-500 ${i === 0 ? 'bg-accent border-accent text-white shadow-[0_0_25px_rgba(25,171,228,0.5)] scale-110' : 'border-themed text-themed-muted group-hover:border-themed-strong group-hover:text-themed-tertiary'}`}>
                   {i + 1}
                 </div>
                 <div className="flex flex-col">
-                  <span className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-colors ${i === 0 ? 'text-white' : 'text-white/30 group-hover:text-white/50'}`}>
+                  <span className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-colors ${i === 0 ? 'text-themed' : 'text-themed-muted group-hover:text-themed-tertiary'}`}>
                     {step.label}
                   </span>
-                  {i === 0 && <span className="text-[8px] text-accent font-bold uppercase tracking-tighter animate-pulse">Action Required</span>}
+                  {i === 0 && <span className="text-[9px] text-accent font-bold uppercase tracking-tighter animate-pulse">Action Required</span>}
                 </div>
               </div>
-              {i < 2 && <ArrowRight size={14} className="text-white/10" />}
+              {i < 2 && <ArrowRight size={14} className="text-themed-faint" />}
             </React.Fragment>
           ))}
         </motion.div>
-      </div >
+      </div>
       <LeadMagnetGuide isOpen={isGuideOpen} onClose={() => setIsGuideOpen(false)} />
     </section >
   );

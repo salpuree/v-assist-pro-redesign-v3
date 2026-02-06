@@ -80,18 +80,18 @@ const Integrations: React.FC = () => {
   }, []);
 
   return (
-    <section id="integrations" className="bg-cream dark:bg-dark text-dark dark:text-cream py-32 pb-40 md:pb-32 border-t border-dark/5 dark:border-white/5 relative overflow-hidden">
+    <section id="integrations" className="bg-cream dark:bg-dark text-themed py-32 pb-40 md:pb-32 border-t border-themed-subtle relative overflow-hidden">
       {/* Background subtle effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,_var(--tw-gradient-stops))] from-accent/10 to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 md:pl-28 relative z-10">
         <div className="mb-20">
           <div className="mb-12">
-            <h4 className="text-xs uppercase tracking-[0.3em] mb-6 font-bold" style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-sans)' }}>Command Infrastructure</h4>
-            <h3 className="text-5xl md:text-7xl text-dark dark:text-cream leading-tight" style={{ fontFamily: '"Playfair Display", serif' }}>
-              The <span className="italic text-gray-900 dark:text-cream" style={{ fontFamily: '"Playfair Display", serif' }}>Operations Hub.</span>
+            <h4 className="text-xs uppercase tracking-[0.3em] mb-6 font-bold text-accent font-sans">Command Infrastructure</h4>
+            <h3 className="text-5xl md:text-7xl text-themed leading-tight font-serif">
+              The <span className="italic">Operations Hub.</span>
             </h3>
-            <p className="mt-8 text-lg text-dark dark:text-cream/90 font-light leading-relaxed max-w-2xl" style={{ fontFamily: 'Lato, sans-serif', lineHeight: '22px' }}>
+            <p className="mt-8 text-lg text-themed-secondary font-light leading-relaxed max-w-2xl font-sans">
               Our Ghost Engine doesn't work in isolation. We bridge the gap between your specialized industry tools and institutional automation.
             </p>
           </div>
@@ -129,8 +129,8 @@ const Integrations: React.FC = () => {
         {/* Proprietary Apps Highlight */}
         <div className="border-t border-dark/10 dark:border-white/10 pt-16">
           <div className="flex items-center gap-4 mb-8">
-            <span className="uppercase tracking-widest font-bold text-sm" style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-sans)' }}>Internal Labs</span>
-            <div className="h-[1px] flex-grow bg-dark/10 dark:bg-white/10"></div>
+            <span className="uppercase tracking-widest font-bold text-sm text-accent font-sans">Internal Labs</span>
+            <div className="h-[1px] flex-grow bg-themed-elevated"></div>
           </div>
 
           <div id="evidence" className="grid grid-cols-1 md:grid-cols-2 gap-6">

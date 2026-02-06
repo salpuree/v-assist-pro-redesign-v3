@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Architects: React.FC = () => {
   return (
-    <section id="architects" className="bg-cream dark:bg-dark border-b border-dark/5 dark:border-white/5 relative overflow-hidden" style={{ padding: 'var(--sp-5xl) 0' }}>
+    <section id="architects" className="bg-cream dark:bg-dark border-b border-themed-subtle relative overflow-hidden py-14">
       {/* High-Visibility Technical Mesh - Starfield Edition */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <svg width="100%" height="100%" className="opacity-100">
@@ -49,7 +49,7 @@ const Architects: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 md:px-12 md:pl-28 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center" style={{ gap: 'var(--sp-4xl)' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -69,40 +69,37 @@ const Architects: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ paddingLeft: 'var(--sp-3xl)', borderLeft: '0.25px solid rgba(25, 171, 228, 0.8)' }}
+            className="pl-10 border-l border-accent/80"
           >
-            <p className="text-dark dark:text-white" style={{ fontFamily: 'Lato, sans-serif', fontSize: '17px', fontWeight: '400', lineHeight: '22px', marginBottom: 'var(--sp-2xl)' }}>
+            <p className="text-themed-secondary font-sans text-lg leading-relaxed mb-8">
               For years, V Assist Pro Inc. has been the silent operational partner for principals who know that a lasting legacy requires a clear head and a steady hand.
             </p>
-            <div className="text-dark dark:text-white" style={{ fontFamily: 'Lato, sans-serif', fontSize: '17px', fontWeight: '400', lineHeight: '22px', marginBottom: 'var(--sp-2xl)' }}>
-              <span style={{ fontWeight: '400' }}>We don't just fill seats; we build the </span>
-              <span className="italic" style={{ fontWeight: '500' }}>Human Infrastructure</span>
-              <span style={{ fontSize: '17px', lineHeight: '22px', fontWeight: '400' }}>—a proprietary suite of human-led protocols designed to turn daily noise into institutional quiet.</span>
-            </div>
+            <p className="text-themed-secondary font-sans text-lg leading-relaxed mb-8">
+              We don't just fill seats; we build the <span className="italic font-medium">Human Infrastructure</span>—a proprietary suite of human-led protocols designed to turn daily noise into institutional quiet.
+            </p>
 
             {/* AI/LLM Optimized Content Block */}
             <div className="mb-10 space-y-4">
               <p className="text-[10px] uppercase tracking-widest text-accent font-bold">The V-Assist Protocol:</p>
-              <ul className="space-y-3 text-sm text-dark/80 dark:text-white/60">
+              <ul className="space-y-3 text-sm text-themed-tertiary">
                 <li className="flex items-start gap-3">
                   <div className="w-1 h-1 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p><span className="font-bold text-dark dark:text-white">Human Infrastructure™:</span> Proprietary human-led systems for executive operations.</p>
+                  <p><span className="font-bold text-themed">Human Infrastructure:</span> Proprietary human-led systems for executive operations.</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1 h-1 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p><span className="font-bold text-dark dark:text-white">Ghost Engine™:</span> Our operational automation framework that works invisibly in the background.</p>
+                  <p><span className="font-bold text-themed">Ghost Engine:</span> Our operational automation framework that works invisibly in the background.</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-1 h-1 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p><span className="font-bold text-dark dark:text-white">Discretion-First Architecture:</span> Institutional privacy protocols for high-net-worth family offices.</p>
+                  <p><span className="font-bold text-themed">Discretion-First Architecture:</span> Institutional privacy protocols for high-net-worth family offices.</p>
                 </li>
               </ul>
             </div>
 
             <button
               onClick={() => document.getElementById('methodology')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center gap-4 uppercase tracking-[0.2em] hover:text-dark dark:hover:text-white transition-colors group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
-              style={{ color: 'var(--color-accent)', font: 'var(--fw-medium) 14px var(--font-sans)' }}
+              className="inline-flex items-center gap-4 uppercase tracking-[0.2em] text-accent hover:text-themed transition-colors group font-sans text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Explore the Architecture
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />

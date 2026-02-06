@@ -33,10 +33,9 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
       {/* Navigation */}
       <button
         onClick={onBack}
-        className="mb-12 flex items-center gap-3 text-xs uppercase tracking-widest text-gray-900 dark:text-white hover:text-accent transition-colors group"
-        style={{ font: '700 12px/16px Lato, sans-serif' }}
+        className="mb-12 flex items-center gap-3 text-xs uppercase tracking-widest text-themed hover:text-accent transition-colors group font-sans font-bold"
       >
-        <div className="p-2 rounded-full border border-dark/10 dark:border-white/10 group-hover:border-accent">
+        <div className="p-2 rounded-full border border-themed group-hover:border-accent">
           <ArrowLeft size={16} />
         </div>
         Back to Sectors
@@ -48,7 +47,7 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
           {/* Left Header */}
           <div>
             <div className="flex items-center gap-4 mb-8 flex-wrap">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-accent font-bold" style={{ font: '700 12px/16px Lato, sans-serif' }}>
+              <span className="text-xs uppercase tracking-[0.2em] text-accent font-bold font-sans">
                 {sector.description}
               </span>
               {sector.liveStatus && (
@@ -58,11 +57,11 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
               )}
             </div>
 
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-dark dark:text-cream leading-[0.9] mb-8 tracking-tight" style={{ fontFamily: '"Playfair Display", serif' }}>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-themed leading-[0.9] mb-8 tracking-tight">
               {sector.title}
             </h1>
 
-            <p className="text-xl text-dark dark:text-white font-light max-w-md leading-relaxed mb-12 border-l-2 border-accent pl-6" style={{ fontFamily: 'Lato, sans-serif' }}>
+            <p className="text-xl text-themed-secondary font-light max-w-md leading-relaxed mb-12 border-l-2 border-accent pl-6 font-sans">
               {sector.subtitle}
             </p>
 
@@ -73,13 +72,13 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
           </div>
 
           {/* Right Protocol Stats */}
-          <div className="bg-white dark:bg-white/5 p-8 md:p-12 border border-dark/5 dark:border-white/10 shadow-xl">
-            <h3 className="font-serif text-2xl text-dark dark:text-cream mb-8" style={{ fontFamily: '"Playfair Display", serif' }}>Protocol Impact</h3>
+          <div className="bg-themed-secondary p-8 md:p-12 border border-themed shadow-themed-card">
+            <h3 className="font-serif text-2xl text-themed mb-8">Protocol Impact</h3>
             <div className="space-y-8">
               {sector.impact.stats.map((stat, i) => (
-                <div key={i} className="flex items-center justify-between border-b border-dark/5 dark:border-white/5 pb-4">
-                  <span className="text-xs text-dark dark:text-white uppercase tracking-wider" style={{ fontFamily: 'Lato, sans-serif' }}>{stat.label}</span>
-                  <span className="text-3xl md:text-4xl font-bold text-dark dark:text-cream">{stat.value}</span>
+                <div key={i} className="flex items-center justify-between border-b border-themed-subtle pb-4">
+                  <span className="text-xs text-themed-secondary uppercase tracking-wider font-sans">{stat.label}</span>
+                  <span className="text-3xl md:text-4xl font-bold text-themed">{stat.value}</span>
                 </div>
               ))}
             </div>
@@ -130,9 +129,9 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
         </div>
 
         {/* The Friction Section */}
-        <div className="mb-32" style={{ borderColor: 'rgba(255, 255, 255, 0.1)', borderTopWidth: '1px', borderWidth: '1px 0px 0px', marginBottom: '128px', paddingTop: '80px' }}>
-          <h2 className="font-serif text-4xl md:text-5xl text-dark dark:text-cream mb-6" style={{ fontFamily: '"Playfair Display", serif', marginBottom: '24px', font: '400 48px/48px "Playfair Display", serif' }}>The Friction</h2>
-          <p className="text-lg text-dark dark:text-white mb-12 max-w-3xl" style={{ fontFamily: 'Lato, sans-serif' }}>
+        <div className="mb-32 border-t border-themed-subtle pt-20">
+          <h2 className="font-serif text-4xl md:text-5xl text-themed mb-6">The Friction</h2>
+          <p className="text-lg text-themed-secondary mb-12 max-w-3xl font-sans">
             The specific operational bottlenecks holding this industry back.
           </p>
 
@@ -146,8 +145,8 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
                 transition={{ delay: i * 0.1 }}
                 className="bg-red-500/5 p-8 border-l-4 border-red-500/40 hover:border-red-500/60 transition-colors"
               >
-                <h4 className="font-bold text-lg mb-2 text-dark dark:text-cream">{friction.title}</h4>
-                <p className="text-sm text-dark dark:text-white leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>{friction.description}</p>
+                <h4 className="font-bold text-lg mb-2 text-themed">{friction.title}</h4>
+                <p className="text-sm text-themed-secondary leading-relaxed font-sans">{friction.description}</p>
               </motion.div>
             ))}
           </div>

@@ -230,7 +230,7 @@ export const PROCESS_STEPS: Step[] = [
 export const FAQS: FAQItem[] = [
   {
     question: "How is this different from hiring a virtual assistant?",
-    answer: "An assistant is someone you manage. We are partners you rely on. We don't just take tasks; we own the outcomes. You don't manage our people—we manage the entire operational layer for you."
+    answer: "An assistant is someone you manage. We are partners you rely on. We don't just take tasks; we own the outcomes. You don't manage our people — we manage the entire operational layer for you. Unlike a single hire, we operate as a team: if your primary partner is unavailable, another trained specialist steps in immediately. Your operations never stop."
   },
   {
     question: "Will I lose my 'personal touch' with clients?",
@@ -238,10 +238,10 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "How do you handle sensitive data and privacy?",
-    answer: "Discretion is our primary product. We work with family offices and elite fleet owners where privacy is non-negotiable. We use encrypted comms and strict institutional NDAs for every partner we assign."
+    answer: "Discretion is our primary product. We work with family offices and elite fleet owners where privacy is non-negotiable. We use encrypted communications and strict institutional NDAs for every partner we assign."
   },
   {
-    question: "What is the 'Ghost Engine' exactly?",
+    question: "What is the Ghost Engine?",
     answer: "It's our term for the invisible human infrastructure we build for you. It's the combination of our elite personnel and the proprietary protocols that keep your business running silently in the background."
   },
   {
@@ -249,16 +249,8 @@ export const FAQS: FAQItem[] = [
     answer: "Integration usually takes 14 to 21 days. We start by absorbing the most painful bottlenecks first, providing immediate breathing room while we map the rest of your operations."
   },
   {
-    question: "What exactly is family office operations management?",
-    answer: "Family office operations is the institutional management of a private wealth legacy. It covers everything from household staff coordination and property management to travel logistics and vendor oversight. We provide the 'Human Infrastructure' to ensure these gears turn silently so the family can focus on their personal and financial legacy."
-  },
-  {
     question: "How do I outsource my customer communications safely?",
-    answer: "Outsourcing with us is built on a 'White-Label Human' model. Our specialists learn your voice, your brand standards, and your specific CRM (like Limo Anywhere or Salesforce). We don't use call centers; we assign a dedicated partner who acts as a senior member of your own team, ensuring absolute security and brand consistency."
-  },
-  {
-    question: "Is there a single point of failure in this partnership?",
-    answer: "No. Unlike a single hire, we operate as a team. If your primary partner is unavailable, another trained specialist from our bench steps in immediately. Your operations never stop."
+    answer: "Outsourcing with us is built on a White-Label Human model. Our specialists learn your voice, your brand standards, and your specific CRM (like Limo Anywhere or Salesforce). We don't use call centers; we assign a dedicated partner who acts as a senior member of your own team, ensuring absolute security and brand consistency."
   },
   {
     question: "Do we use our existing software or yours?",
