@@ -23,7 +23,7 @@ const FAQ: React.FC = () => {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-0">
           {FAQS.map((faq, index) => (
             <div
               key={index}
@@ -31,13 +31,16 @@ const FAQ: React.FC = () => {
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between py-10 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] group"
+                className="w-full flex items-center gap-6 py-8 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group"
               >
-                <span className={`text-xl md:text-2xl font-serif transition-colors duration-300 ${activeIndex === index ? 'text-accent font-medium' : 'text-themed group-hover:text-accent'}`}>
+                <span className={`text-xs font-mono tracking-widest flex-shrink-0 transition-colors duration-300 ${activeIndex === index ? 'text-accent' : 'text-themed-muted'}`}>
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className={`text-lg md:text-xl font-serif transition-colors duration-300 flex-1 ${activeIndex === index ? 'text-accent' : 'text-themed group-hover:text-accent'}`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 ml-8 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${activeIndex === index ? 'bg-accent text-white rotate-180' : 'bg-themed-elevated text-themed group-hover:bg-accent group-hover:text-white'}`}>
-                  {activeIndex === index ? <Minus size={18} /> : <Plus size={18} />}
+                <div className={`flex-shrink-0 ml-4 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${activeIndex === index ? 'bg-accent text-white' : 'border border-themed text-themed-muted group-hover:border-accent group-hover:text-accent'}`}>
+                  {activeIndex === index ? <Minus size={16} /> : <Plus size={16} />}
                 </div>
               </button>
 
@@ -50,7 +53,7 @@ const FAQ: React.FC = () => {
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="pb-8 text-themed-secondary leading-relaxed font-light font-sans">
+                    <div className="pb-8 pl-12 border-l-2 border-accent/30 ml-4 text-themed-secondary leading-relaxed font-light font-sans text-base">
                       {faq.answer}
                     </div>
                   </motion.div>

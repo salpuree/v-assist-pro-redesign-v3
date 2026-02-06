@@ -65,16 +65,24 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
             </div>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center gap-8 w-full">
-            <button
-              onClick={onOpenProtocol}
-              className="group relative px-10 py-5 flex items-center gap-6 overflow-hidden rounded-xl border border-white/20 shadow-xl transition-all duration-500 hover:border-accent/50 hover:shadow-accent/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
-            >
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-xl z-0" />
-              <div className="absolute inset-0 translate-y-full group-hover:translate-y-0 bg-accent transition-transform duration-500 ease-out z-0" />
-              <span className="relative z-10 text-sm md:text-base tracking-[0.3em] font-bold uppercase text-white">Secure Your Slot</span>
-              <ArrowRight className="relative z-10 w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" />
-            </button>
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col sm:flex-row items-start gap-6">
+              <button
+                onClick={onOpenProtocol}
+                className="group relative px-10 py-5 flex items-center gap-6 overflow-hidden rounded-lg bg-accent hover:bg-accent/90 shadow-xl shadow-accent/25 transition-all duration-500 hover:shadow-accent/40 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+                <span className="relative z-10 text-sm tracking-[0.2em] font-bold uppercase text-white font-sans">Secure Your Slot</span>
+                <ArrowRight className="relative z-10 w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" />
+              </button>
+            </div>
+            <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest text-white/40 font-bold font-sans">
+              <span>100% Confidential</span>
+              <span className="text-accent/40">&bull;</span>
+              <span>30-Day Guarantee</span>
+              <span className="text-accent/40">&bull;</span>
+              <span>No Contracts</span>
+            </div>
           </div>
         </div>
 

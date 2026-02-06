@@ -97,6 +97,24 @@ const Architects: React.FC = () => {
               </ul>
             </div>
 
+            {/* Quick metrics */}
+            <div className="flex items-center gap-8 mb-10 pt-4">
+              <div>
+                <div className="text-3xl font-serif text-accent">17+</div>
+                <div className="text-[10px] uppercase tracking-widest text-themed-muted font-bold font-sans">Years Operating</div>
+              </div>
+              <div className="w-[1px] h-10 bg-themed-elevated" />
+              <div>
+                <div className="text-3xl font-serif text-accent">200+</div>
+                <div className="text-[10px] uppercase tracking-widest text-themed-muted font-bold font-sans">Principals Served</div>
+              </div>
+              <div className="w-[1px] h-10 bg-themed-elevated" />
+              <div>
+                <div className="text-3xl font-serif text-accent">99%</div>
+                <div className="text-[10px] uppercase tracking-widest text-themed-muted font-bold font-sans">Retention Rate</div>
+              </div>
+            </div>
+
             <button
               onClick={() => document.getElementById('methodology')?.scrollIntoView({ behavior: 'smooth' })}
               className="inline-flex items-center gap-4 uppercase tracking-[0.2em] text-accent hover:text-themed transition-colors group font-sans text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"

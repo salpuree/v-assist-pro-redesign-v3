@@ -70,7 +70,8 @@ const ProcessHorizontal: React.FC = () => {
                 We replace hero-dependency with the <span className="text-themed font-medium">Ghost Engine</span> -- a bespoke system of elite human partners and operational protocols that converts daily friction into scalable, institutional quiet.
               </p>
               <div className="mt-12 flex items-center gap-4 text-[10px] font-mono tracking-[0.4em] text-accent font-bold">
-                <span>SCROLL TO EXPLORE ARCHITECTURE</span>
+                <div className="w-8 h-[1px] bg-accent/50" />
+                <span>SCROLL TO EXPLORE</span>
                 <ArrowRight size={14} className="animate-bounce-x" />
               </div>
             </div>

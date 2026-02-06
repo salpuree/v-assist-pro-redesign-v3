@@ -20,6 +20,29 @@ const SectorStack: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
 
+        {/* Section Intro - visible before scroll */}
+        <div className="min-h-[50vh] flex flex-col justify-center max-w-3xl mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h4 className="text-xs uppercase tracking-[0.3em] mb-6 text-accent font-bold font-sans">Sector Intelligence</h4>
+            <h2 className="font-serif text-5xl md:text-7xl text-themed leading-tight mb-6">
+              Built for <span className="italic">Your</span> Industry.
+            </h2>
+            <p className="text-lg text-themed-secondary font-light leading-relaxed max-w-xl font-sans">
+              Private, elevated, relentlessly efficient. Every V-Assist deployment is engineered for the specific operational friction of your sector. No templates -- only protocol.
+            </p>
+            <div className="mt-8 flex items-center gap-3 text-[10px] uppercase tracking-widest text-themed-muted font-bold font-sans">
+              <div className="w-6 h-[1px] bg-accent/50" />
+              <span>Scroll to explore each sector</span>
+              <ArrowRight size={12} className="text-accent" />
+            </div>
+          </motion.div>
+        </div>
+
         {SECTORS.map((sector, index) => {
           const IconComponent = icons[sector.icon];
 

@@ -127,10 +127,12 @@ const Integrations: React.FC = () => {
         </div>
 
         {/* Proprietary Apps Highlight */}
-        <div className="border-t border-dark/10 dark:border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-8">
+        <div className="border-t border-themed pt-16 mt-8">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-2 h-2 bg-accent rounded-full" />
             <span className="uppercase tracking-widest font-bold text-sm text-accent font-sans">Internal Labs</span>
             <div className="h-[1px] flex-grow bg-themed-elevated"></div>
+            <span className="text-[9px] uppercase tracking-widest text-themed-muted font-sans font-bold">Proprietary</span>
           </div>
 
           <div id="evidence" className="grid grid-cols-1 md:grid-cols-2 gap-6">
