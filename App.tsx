@@ -17,6 +17,7 @@ import ExitIntentPopup from './components/ExitIntentPopup';
 import LogoCarousel from './components/LogoCarousel';
 import LocationDetail from './components/LocationDetail';
 import StickyHeaderBanner from './components/StickyHeaderBanner';
+import MobileHeader from './components/MobileHeader';
 import { AnimatePresence } from 'framer-motion';
 import { useDeviceDetection } from './hooks/useDeviceDetection';
 import { SECTORS, LOCATIONS } from './constants';
@@ -102,22 +103,43 @@ const App: React.FC = () => {
       <main className="pt-0 md:pt-[68px]">
         <AnimatePresence mode="wait">
           {selectedSector ? (
-            <SectorDetail
-              key="detail"
-              sector={selectedSector}
-              onBack={() => setSelectedSectorId(null)}
-              onOpenProtocol={handleOpenProtocol}
-            />
+            <>
+              {isMobile && (
+                <MobileHeader
+                  onBack={() => setSelectedSectorId(null)}
+                  onHomeClick={resetView}
+                  title={selectedSector.title}
+                />
+              )}
+              <SectorDetail
+                key="detail"
+                sector={selectedSector}
+                onBack={() => setSelectedSectorId(null)}
+                onOpenProtocol={handleOpenProtocol}
+              />
+            </>
           ) : selectedLocation ? (
-            <LocationDetail
-              key="location"
-              location={selectedLocation}
-              onBack={() => {
-                setSelectedLocationId(null);
-                window.history.pushState({}, '', '/');
-              }}
-              onOpenProtocol={handleOpenProtocol}
-            />
+            <>
+              {isMobile && (
+                <MobileHeader
+                  onBack={() => {
+                    setSelectedLocationId(null);
+                    window.history.pushState({}, '', '/');
+                  }}
+                  onHomeClick={resetView}
+                  title={selectedLocation.city}
+                />
+              )}
+              <LocationDetail
+                key="location"
+                location={selectedLocation}
+                onBack={() => {
+                  setSelectedLocationId(null);
+                  window.history.pushState({}, '', '/');
+                }}
+                onOpenProtocol={handleOpenProtocol}
+              />
+            </>
           ) : (
             <div key="home">
               {isMobile ? <MobileHero onOpenProtocol={handleOpenProtocol} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} /> : <Hero onOpenProtocol={handleOpenProtocol} />}

@@ -23,7 +23,7 @@ const LogoCarousel: React.FC = () => {
                     {[...partners, ...partners].map((partner, i) => (
                         <div key={i} className="flex items-center gap-4 group cursor-default">
                             <partner.icon size={24} className="text-dark/20 dark:text-white/20 group-hover:text-accent transition-colors duration-500" />
-                            <span className="text-2xl font-serif text-dark/10 dark:text-white/10 group-hover:text-dark/40 dark:group-hover:text-white/40 transition-colors duration-500" style={{ fontFamily: 'Playfair Display, serif' }}>
+                            <span className="text-2xl font-serif text-dark/10 dark:text-white/10 group-hover:text-dark/40 dark:group-hover:text-white/40 transition-colors duration-500">
                                 {partner.name}
                             </span>
                         </div>
@@ -35,7 +35,7 @@ const LogoCarousel: React.FC = () => {
                     {[...partners, ...partners].map((partner, i) => (
                         <div key={i} className="flex items-center gap-4 group cursor-default">
                             <partner.icon size={24} className="text-dark/20 dark:text-white/20 group-hover:text-accent transition-colors duration-500" />
-                            <span className="text-2xl font-serif text-dark/10 dark:text-white/10 group-hover:text-dark/40 dark:group-hover:text-white/40 transition-colors duration-500" style={{ fontFamily: 'Playfair Display, serif' }}>
+                            <span className="text-2xl font-serif text-dark/10 dark:text-white/10 group-hover:text-dark/40 dark:group-hover:text-white/40 transition-colors duration-500">
                                 {partner.name}
                             </span>
                         </div>

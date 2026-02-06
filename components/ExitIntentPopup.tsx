@@ -65,7 +65,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onOpenProtocol }) => 
                         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
                         className="fixed inset-0 z-[110] flex items-center justify-center p-4 pointer-events-none"
                     >
-                        <div className="bg-cream dark:bg-charcoal rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-white/10 pointer-events-auto relative">
+                        <div className="bg-cream dark:bg-charcoal rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden border border-themed pointer-events-auto relative">
                             {/* Patterns */}
                             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-[60px] rounded-full -translate-y-1/2 translate-x-1/2" />
                             <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 blur-[60px] rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -77,7 +77,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onOpenProtocol }) => 
                                 aria-label="Close modal"
                                 type="button"
                             >
-                                <X size={24} className="text-dark dark:text-cream" />
+                                <X size={24} className="text-themed" />
                             </button>
 
                             <div className="p-8 md:p-12 text-center relative z-10">
@@ -91,10 +91,10 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onOpenProtocol }) => 
                                     <span className="text-[10px] uppercase tracking-widest font-bold text-accent">Wait – Don't Go Just Yet</span>
                                 </motion.div>
 
-                                <h2 className="text-3xl md:text-4xl font-serif text-dark dark:text-cream mb-4">
+                                <h2 className="text-3xl md:text-4xl font-serif text-themed mb-4">
                                     Reclaim your focus <span className="italic">today.</span>
                                 </h2>
-                                <p className="text-gray-600 dark:text-white/70 mb-8 max-w-sm mx-auto">
+                                <p className="text-themed-secondary mb-8 max-w-sm mx-auto font-sans">
                                     You’re just one briefing away from eliminating operational noise. Secure your slot before Q1 onboarding closes.
                                 </p>
 
@@ -113,11 +113,11 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onOpenProtocol }) => 
                                     <div className="flex items-center justify-center gap-6 opacity-60">
                                         <div className="flex items-center gap-2">
                                             <ShieldCheck size={14} className="text-accent" />
-                                            <span className="text-[9px] uppercase tracking-wider font-bold">100% Private</span>
+                                            <span className="text-[10px] uppercase tracking-wider font-bold text-themed-tertiary">100% Private</span>
                                         </div>
                                         <div className="flex items-center gap-2">
                                             <Lock size={14} className="text-accent" />
-                                            <span className="text-[9px] uppercase tracking-wider font-bold">Discretion Protocol</span>
+                                            <span className="text-[10px] uppercase tracking-wider font-bold text-themed-tertiary">Discretion Protocol</span>
                                         </div>
                                     </div>
                                 </div>

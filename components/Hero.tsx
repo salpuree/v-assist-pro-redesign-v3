@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Lock, Activity, Sparkles, ShieldCheck, Download } from 'lucide-react';
 import LeadMagnetGuide from './LeadMagnetGuide';
+import { useReducedMotion } from '../hooks/useReducedMotion';
 
 const heroStyles = `
   @keyframes wave-flow-1 {
@@ -28,6 +29,8 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
   const [isGuideOpen, setIsGuideOpen] = React.useState(false);
+  const prefersReducedMotion = useReducedMotion();
+  const motionProps = prefersReducedMotion ? { initial: false, animate: false } : {};
   React.useEffect(() => {
     const styleTag = document.createElement('style');
     styleTag.innerHTML = heroStyles;
@@ -44,8 +47,8 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
 
         {/* ===== BREATHING DOT GRID ===== */}
         <motion.div
-          animate={{ opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          animate={prefersReducedMotion ? { opacity: 0.4 } : { opacity: [0.3, 0.5, 0.3] }}
+          transition={prefersReducedMotion ? {} : { duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle, rgba(25, 171, 228, 0.35) 1px, transparent 1px), radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px)`,

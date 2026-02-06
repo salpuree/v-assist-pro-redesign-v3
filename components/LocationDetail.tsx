@@ -19,7 +19,7 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-cream dark:bg-dark min-h-screen pt-32 pb-20 relative overflow-hidden"
+            className="bg-cream dark:bg-dark min-h-screen pt-16 md:pt-32 pb-28 md:pb-20 relative overflow-hidden"
         >
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
@@ -29,7 +29,7 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
                 {/* Navigation */}
                 <button
                     onClick={onBack}
-                    className="flex items-center gap-2 text-accent uppercase tracking-widest text-[10px] font-bold mb-12 hover:gap-4 transition-all group"
+                    className="hidden md:flex items-center gap-2 text-accent uppercase tracking-widest text-[10px] font-bold mb-12 hover:gap-4 transition-all group"
                 >
                     <ArrowLeft size={16} />
                     Back to Principal Support
@@ -48,7 +48,7 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
                                 <span className="text-xs uppercase tracking-[0.4em] font-bold text-accent/60">Regional Command</span>
                             </div>
 
-                            <h1 className="text-6xl md:text-8xl font-serif text-dark dark:text-cream leading-[0.9] tracking-tight mb-8">
+                            <h1 className="text-6xl md:text-8xl font-serif text-themed leading-[0.9] tracking-tight mb-8">
                                 {location.city} <br />
                                 <span className="italic text-accent">{location.region}.</span>
                             </h1>

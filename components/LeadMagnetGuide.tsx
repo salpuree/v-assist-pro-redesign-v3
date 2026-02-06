@@ -81,13 +81,13 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             className="fixed inset-0 z-[70] flex items-center justify-center p-4"
           >
-            <div className="bg-white dark:bg-charcoal rounded-2xl shadow-2xl max-w-md w-full overflow-hidden relative">
+            <div className="bg-cream dark:bg-charcoal rounded-2xl shadow-2xl max-w-md w-full overflow-hidden relative border border-themed">
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 p-2 hover:bg-dark/5 dark:hover:bg-white/10 rounded-lg transition-colors z-10"
+                className="absolute top-4 right-4 p-2 hover:bg-themed-elevated rounded-lg transition-colors z-10"
               >
-                <X size={20} className="text-dark dark:text-cream" />
+                <X size={20} className="text-themed" />
               </button>
 
               {!isSuccess ? (
@@ -101,14 +101,14 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <Download size={24} className="text-accent" />
-                      <h2 className="text-2xl font-serif text-dark dark:text-cream">
+                      <h2 className="text-2xl font-serif text-themed">
                         Free Guide
                       </h2>
                     </div>
-                    <p className="text-lg font-semibold text-dark dark:text-cream mb-2">
+                    <p className="text-lg font-semibold text-themed mb-2">
                       Family Office Operations Excellence
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-themed-tertiary font-sans">
                       Learn how to reduce operational noise and reclaim 15+ hours per week
                     </p>
                   </motion.div>
@@ -122,19 +122,19 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                   >
                     <div className="flex items-start gap-3">
                       <CheckCircle size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                      <span className="text-sm text-themed-secondary font-sans">
                         Industry best practices for operational efficiency
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                      <span className="text-sm text-themed-secondary font-sans">
                         Metrics and benchmarking for family offices
                       </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                      <span className="text-sm text-themed-secondary font-sans">
                         Proven frameworks to eliminate operational bottlenecks
                       </span>
                     </div>
@@ -149,7 +149,7 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                     className="space-y-4"
                   >
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-dark dark:text-cream mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-themed mb-2">
                         Full Name
                       </label>
                       <input
@@ -159,12 +159,12 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Your name"
-                        className="w-full px-4 py-3 rounded-lg border border-dark/10 dark:border-white/10 bg-white dark:bg-dark/50 text-dark dark:text-cream placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-themed bg-themed text-themed placeholder:text-themed-muted focus:outline-none focus:ring-2 focus:ring-accent transition-all font-sans"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-dark dark:text-cream mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-themed mb-2">
                         Email Address
                       </label>
                       <input
@@ -174,7 +174,7 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="your@email.com"
-                        className="w-full px-4 py-3 rounded-lg border border-dark/10 dark:border-white/10 bg-white dark:bg-dark/50 text-dark dark:text-cream placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-themed bg-themed text-themed placeholder:text-themed-muted focus:outline-none focus:ring-2 focus:ring-accent transition-all font-sans"
                       />
                     </div>
 
@@ -200,7 +200,7 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                       )}
                     </button>
 
-                    <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
+                    <p className="text-xs text-themed-tertiary text-center font-sans">
                       We respect your privacy. Unsubscribe anytime.
                     </p>
                   </motion.form>
@@ -220,9 +220,9 @@ const LeadMagnetGuide: React.FC<LeadMagnetGuideProps> = ({ isOpen, onClose }) =>
                     <CheckCircle size={56} className="text-green-500 mx-auto" />
                   </motion.div>
 
-                  <h3 className="text-2xl font-serif text-dark dark:text-cream mb-2">Success!</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-2">Check your email for your free guide</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-500">
+                  <h3 className="text-2xl font-serif text-themed mb-2">Success!</h3>
+                  <p className="text-themed-secondary mb-2 font-sans">Check your email for your free guide</p>
+                  <p className="text-sm text-themed-tertiary font-sans">
                     We've sent the Family Office Operations Excellence guide to {email}
                   </p>
                 </motion.div>

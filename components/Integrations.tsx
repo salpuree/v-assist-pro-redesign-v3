@@ -116,7 +116,7 @@ const Integrations: React.FC = () => {
                         className="integration-logo-img"
                       />
                     </div>
-                    <span className="text-sm font-medium tracking-wide text-dark dark:text-cream/90 transition-colors text-center">
+                    <span className="text-sm font-medium tracking-wide text-themed transition-colors text-center">
                       {tool.name}
                     </span>
                   </div>
@@ -156,8 +156,8 @@ const Integrations: React.FC = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-serif text-2xl tracking-wide text-dark dark:text-cream mb-1" style={{ fontFamily: '"Playfair Display", serif' }}>{app.name}</h4>
-                    <p className="text-xs text-dark dark:text-cream/80 leading-relaxed max-w-sm" style={{ fontFamily: 'Lato, sans-serif' }}>{app.desc}</p>
+                    <h4 className="font-serif text-2xl tracking-wide text-themed mb-1">{app.name}</h4>
+                    <p className="text-xs text-themed-secondary leading-relaxed max-w-sm font-sans">{app.desc}</p>
                   </div>
                 </div>
               </motion.div>

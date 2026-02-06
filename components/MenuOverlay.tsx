@@ -75,12 +75,12 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
             {/* Close Button Inside Panel */}
             <button
               onClick={onClose}
-              className="absolute top-8 right-8 p-3 hover:scale-110 hover:rotate-90 transition-all duration-500 rounded-full bg-black/5 dark:bg-white/10 text-dark dark:text-cream z-20"
+              className="absolute top-8 right-8 p-3 hover:scale-110 hover:rotate-90 transition-all duration-500 rounded-full bg-themed-elevated text-themed z-20"
             >
               <X size={24} />
             </button>
 
-            <div className="flex-1 flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 relative z-10 text-gray-900 dark:text-cream h-full max-h-screen">
+            <div className="flex-1 flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 relative z-10 text-themed h-full max-h-screen">
               {/* Logo / Title Area (Optional height reduction) */}
               <div className="mb-8 md:mb-12">
                 <p className="text-[10px] font-bold tracking-[0.6em] text-accent uppercase opacity-50">Private Terminal</p>
@@ -138,9 +138,9 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
                 transition={{ delay: 0.5 }}
                 className="mt-12 md:mt-16 grid grid-cols-1 gap-6 md:gap-8"
               >
-                <div style={{ fontFamily: 'Lato, sans-serif' }} className="space-y-1">
-                  <p className="text-lg md:text-xl font-medium text-gray-900 dark:text-white">(941) 623-4590</p>
-                  <div className="text-lg md:text-xl hover:text-accent cursor-pointer transition-colors text-gray-800 dark:text-cream/80" style={{ fontWeight: '500' }}>
+                <div className="font-sans space-y-1">
+                  <p className="text-lg md:text-xl font-medium text-themed">(941) 623-4590</p>
+                  <div className="text-lg md:text-xl hover:text-accent cursor-pointer transition-colors text-themed-secondary font-medium">
                     <p>info@vassistproinc.com</p>
                   </div>
                 </div>

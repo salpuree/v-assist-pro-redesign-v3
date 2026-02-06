@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
           >
             <Sparkles size={14} className="text-accent animate-pulse" />
             <div className="h-[1px] w-8 bg-accent/40"></div>
-            <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold" style={{ fontFamily: 'Lato, sans-serif' }}>Ready to reclaim your focus?</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold font-sans">Ready to reclaim your focus?</span>
           </motion.div>
 
           <motion.div
@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
           <div className="space-y-8 lg:col-span-1">
             <div className="space-y-6">
               <img src="https://cdn.builder.io/api/v1/image/assets%2F5197203d26324a14a7c754f2f94e8a71%2F9089607cf9e440629092c9b67d4b2b1c" alt="VAssist Pro" className="h-10 w-auto object-contain" />
-              <p className="text-white/70 leading-relaxed font-light text-sm" style={{ fontFamily: 'Lato, sans-serif' }}>
+              <p className="text-white/70 leading-relaxed font-light text-sm font-sans">
                 We deploy the human infrastructure that ensures your legacy functions perfectly, even when life gets complicated.
               </p>
             </div>
@@ -99,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
           {/* Sectors Column */}
           <div className="space-y-8">
             <h4 className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Industries</h4>
-            <ul className="space-y-4 font-light text-white/80" style={{ fontFamily: 'Lato, sans-serif' }}>
+            <ul className="space-y-4 font-light text-white/80 font-sans">
               {SECTORS.map((sector) => (
                 <li key={sector.id}>
                   <button
@@ -119,7 +119,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
           {/* Locations Column */}
           <div className="space-y-8">
             <h4 className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Global Offices</h4>
-            <ul className="space-y-4 font-light text-white/80" style={{ fontFamily: 'Lato, sans-serif' }}>
+            <ul className="space-y-4 font-light text-white/80 font-sans">
               <li>
                 <span className="block text-sm font-bold text-white mb-1">Florida</span>
                 <span className="block text-xs text-white/40">Naples / Palm Beach / Orlando</span>
@@ -138,7 +138,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
           {/* Company Column */}
           <div className="space-y-8">
             <h4 className="text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Company</h4>
-            <ul className="space-y-4 font-light text-white/80" style={{ fontFamily: 'Lato, sans-serif' }}>
+            <ul className="space-y-4 font-light text-white/80 font-sans">
               <li><button onClick={() => handleScroll('home')} className="hover:text-accent transition-colors text-sm">Home</button></li>
               <li><button onClick={() => handleScroll('architects')} className="hover:text-accent transition-colors text-sm">Our Architects</button></li>
               <li><button onClick={() => handleScroll('faq')} className="hover:text-accent transition-colors text-sm">FAQs</button></li>
@@ -148,7 +148,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenProtocol, onSelectSector }) => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.4em] opacity-40 font-bold" style={{ fontFamily: 'Lato, sans-serif' }}>
+        <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.4em] opacity-40 font-bold font-sans">
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
               <Globe size={12} className="text-accent" />

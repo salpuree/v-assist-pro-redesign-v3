@@ -57,10 +57,10 @@ const Architects: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="font-serif text-6xl md:text-8xl leading-[0.85] tracking-tight text-dark dark:text-cream mb-8" style={{ fontFamily: '"Playfair Display", serif' }}>
+            <h2 className="font-serif text-6xl md:text-8xl leading-[0.85] tracking-tight text-themed mb-8">
               Partners <br />
               Behind the <br />
-              <span className="italic" style={{ color: 'var(--color-accent)' }}>Scenes.</span>
+              <span className="italic text-accent">Scenes.</span>
             </h2>
           </motion.div>
 

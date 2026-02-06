@@ -28,12 +28,12 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="bg-cream dark:bg-dark min-h-screen pt-24 pb-20 pl-6 md:pl-28 pr-6 relative"
+      className="bg-cream dark:bg-dark min-h-screen pt-16 md:pt-24 pb-28 md:pb-20 pl-6 md:pl-28 pr-6 relative"
     >
       {/* Navigation */}
       <button
         onClick={onBack}
-        className="mb-12 flex items-center gap-3 text-xs uppercase tracking-widest text-themed hover:text-accent transition-colors group font-sans font-bold"
+        className="mb-12 hidden md:flex items-center gap-3 text-xs uppercase tracking-widest text-themed hover:text-accent transition-colors group font-sans font-bold"
       >
         <div className="p-2 rounded-full border border-themed group-hover:border-accent">
           <ArrowLeft size={16} />
