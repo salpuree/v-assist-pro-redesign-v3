@@ -84,11 +84,11 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
           </div>
 
           {/* Header Console */}
-          <header className="relative z-20 border-b border-dark/5 dark:border-white/5 px-12 py-8 flex justify-between items-center bg-white/40 dark:bg-black/40 backdrop-blur-2xl">
+          <header className="relative z-20 border-b border-themed px-12 py-8 flex justify-between items-center bg-themed-surface backdrop-blur-2xl">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-3">
                 <Sparkles className="text-accent" size={20} />
-                <h1 className="text-sm font-mono font-bold uppercase tracking-[0.5em] text-dark dark:text-cream">Private Consultation Briefing</h1>
+                <h1 className="text-sm font-mono font-bold uppercase tracking-[0.5em] text-themed">Private Consultation Briefing</h1>
               </div>
             </div>
 
@@ -115,27 +115,27 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    <h2 className="font-serif text-6xl md:text-8xl leading-none text-dark dark:text-cream tracking-tighter mb-10">
+                    <h2 className="font-serif text-6xl md:text-8xl leading-none text-themed tracking-tighter mb-10">
                       Let's Find <br />
                       <span className="italic text-accent">Your Focus.</span>
                     </h2>
-                    <p className="text-xl font-light text-gray-900 dark:text-cream/80 leading-relaxed border-l-2 border-accent pl-8" style={{ fontFamily: 'Lato, sans-serif' }}>
+                    <p className="text-xl font-light text-themed-secondary leading-relaxed border-l-2 border-accent pl-8 font-sans">
                       Transitioning to a silent operational layer starts with a conversation. This briefing helps us understand where the noise is coming from.
                     </p>
                   </motion.div>
 
                   <div className="grid grid-cols-2 gap-8">
-                    <div className="p-6 bg-white dark:bg-white/5 border border-dark/5 dark:border-white/5 rounded-lg">
+                    <div className="p-6 bg-themed-secondary border border-themed rounded-lg">
                       <MessageSquare size={20} className="text-accent mb-4" />
-                      <h4 className="text-[10px] font-bold uppercase tracking-widest mb-2">Human Connect</h4>
-                      <p className="text-[10px] text-gray-900/60 dark:text-cream/60 uppercase leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>No bots. Just a conversation between partners.</p>
+                      <h4 className="text-[11px] font-bold uppercase tracking-widest mb-2 text-themed">Human Connect</h4>
+                      <p className="text-[11px] text-themed-tertiary uppercase leading-relaxed font-sans">No bots. Just a conversation between partners.</p>
                     </div>
-                    <div className="p-6 bg-white dark:bg-white/5 border border-dark/5 dark:border-white/5 rounded-lg">
+                    <div className="p-6 bg-themed-secondary border border-themed rounded-lg">
                       <Coffee size={20} className="text-accent mb-4" />
-                      <h4 className="text-[10px] font-bold uppercase tracking-widest mb-2">Bespoke Audit</h4>
-                      <p className="text-[10px] text-gray-900/60 dark:text-cream/60 uppercase leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>We map your business rhythm, not a template.</p>
-                    </div>
-                  </div>
+                      <h4 className="text-[11px] font-bold uppercase tracking-widest mb-2 text-themed">Bespoke Audit</h4>
+                      <p className="text-[11px] text-themed-tertiary uppercase leading-relaxed font-sans">We map your business rhythm, not a template.</p>
+                        </div>
+                      </fieldset>
                 </div>
 
                 {/* Form Side (Right) */}
@@ -144,14 +144,14 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="bg-white/80 dark:bg-charcoal/80 backdrop-blur-3xl p-16 border border-dark/5 dark:border-white/10 shadow-2xl rounded-2xl flex flex-col items-center justify-center text-center space-y-8 min-h-[500px]"
+                      className="bg-themed-secondary backdrop-blur-3xl p-16 border border-themed shadow-themed-card rounded-2xl flex flex-col items-center justify-center text-center space-y-8 min-h-[500px]"
                     >
                       <div className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center text-accent">
                         <CheckCircle size={48} className="animate-bounce" />
                       </div>
                       <div className="space-y-4">
-                        <h2 className="text-4xl font-serif text-dark dark:text-cream">Briefing Transmitted.</h2>
-                        <p className="text-lg text-gray-800 dark:text-cream/70 max-w-sm mx-auto" style={{ fontFamily: 'Lato, sans-serif' }}>
+                        <h2 className="text-4xl font-serif text-themed">Briefing Transmitted.</h2>
+                        <p className="text-lg text-themed-secondary max-w-sm mx-auto font-sans">
                           Our team has received your operational data. You will receive a confirmation briefing at <span className="text-accent font-bold">{formData.contact}</span> shortly.
                         </p>
                       </div>
@@ -164,7 +164,7 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
-                      className="bg-white/80 dark:bg-charcoal/80 backdrop-blur-3xl p-10 md:p-16 border border-dark/5 dark:border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.1)] rounded-2xl"
+                      className="bg-themed-secondary backdrop-blur-3xl p-10 md:p-16 border border-themed shadow-themed-elevated rounded-2xl"
                     >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
                         <div className="space-y-3">
@@ -177,7 +177,7 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
                             placeholder="YOUR NAME"
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full bg-transparent border-b-2 border-dark/10 dark:border-white/10 py-4 text-xl focus:outline-none focus:border-accent transition-colors placeholder:text-gray-300 dark:placeholder:text-gray-700 font-serif text-dark dark:text-cream"
+                            className="w-full bg-transparent border-b-2 border-themed py-4 text-xl focus:outline-none focus:border-accent transition-colors placeholder:text-themed-muted font-serif text-themed"
                           />
                         </div>
                         <div className="space-y-3">
@@ -190,51 +190,52 @@ const ProtocolOverlay: React.FC<ProtocolOverlayProps> = ({ isOpen, onClose }) =>
                             placeholder="EMAIL OR PHONE"
                             value={formData.contact}
                             onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
-                            className="w-full bg-transparent border-b-2 border-dark/10 dark:border-white/10 py-4 text-xl focus:outline-none focus:border-accent transition-colors placeholder:text-gray-300 dark:placeholder:text-gray-700 font-serif text-dark dark:text-cream"
+                            className="w-full bg-transparent border-b-2 border-themed py-4 text-xl focus:outline-none focus:border-accent transition-colors placeholder:text-themed-muted font-serif text-themed"
                           />
                         </div>
                       </div>
 
-                      <div className="mb-12 space-y-3">
-                        <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent font-bold">Your Theatre of Operation</label>
+                      <fieldset className="mb-12 space-y-3">
+                        <legend className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent font-bold">Your Theatre of Operation</legend>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                           {['Luxury Fleet', 'Private Wealth', 'Corporate', 'Real Estate', 'Family Office', 'Other'].map(sector => (
                             <button
                               key={sector}
                               type="button"
                               onClick={() => setFormData({ ...formData, sector })}
-                              className={`py-4 border border-dark/10 dark:border-white/10 text-[10px] font-bold uppercase tracking-widest transition-all rounded-lg ${formData.sector === sector ? 'bg-accent border-accent text-white shadow-lg' : 'hover:border-accent hover:text-accent text-dark dark:text-cream'}`}
+                              className={`py-4 border text-[10px] font-bold uppercase tracking-widest transition-all rounded-lg ${formData.sector === sector ? 'bg-accent border-accent text-white shadow-lg' : 'border-themed hover:border-accent hover:text-accent text-themed'}`}
                             >
                               {sector}
                             </button>
                           ))}
                         </div>
-                      </div>
+                      </fieldset>
 
                       <div className="space-y-3 mb-12">
-                        <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent font-bold">What is currently stealing your focus?</label>
+                        <label className="text-[10px] font-mono uppercase tracking-[0.3em] text-accent font-bold" htmlFor="message-field">What is currently stealing your focus?</label>
                         <textarea
+                          id="message-field"
                           rows={4}
                           required
                           name="message"
                           placeholder="Tell us about the noise in your day-to-day..."
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="w-full bg-black/5 dark:bg-white/5 border border-dark/5 dark:border-white/5 rounded-xl p-6 text-sm focus:outline-none focus:border-accent transition-colors resize-none placeholder:text-gray-400 text-dark dark:text-cream"
+                          className="w-full bg-themed-surface border border-themed rounded-xl p-6 text-sm focus:outline-none focus:border-accent transition-colors resize-none placeholder:text-themed-muted text-themed"
                         ></textarea>
                       </div>
 
-                      <div className="flex items-center justify-between gap-12 pt-8 border-t border-dark/5 dark:border-white/5">
+                      <div className="flex items-center justify-between gap-12 pt-8 border-t border-themed">
                         <div className="hidden md:flex items-center gap-4">
                           <ShieldCheck size={20} className="text-accent" />
-                          <span className="text-[9px] font-mono text-gray-500 dark:text-white/70 uppercase tracking-widest">Discretion & Privacy <br /> Guaranteed by Protocol</span>
+                          <span className="text-[10px] font-mono text-themed-tertiary uppercase tracking-widest">Discretion & Privacy <br /> Guaranteed by Protocol</span>
                         </div>
 
                         {/* Liquid Glass Submit Button */}
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="flex-grow md:flex-grow-0 group relative px-12 py-6 overflow-hidden rounded-xl border border-dark/10 dark:border-white/10 shadow-xl transition-all duration-500 hover:border-accent/50 hover:shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="flex-grow md:flex-grow-0 group relative px-12 py-6 overflow-hidden rounded-xl border border-themed shadow-xl transition-all duration-500 hover:border-accent/50 hover:shadow-accent/20 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           <div className={`absolute inset-0 ${isSubmitting ? 'bg-accent' : 'bg-dark dark:bg-white'} backdrop-blur-2xl group-hover:bg-accent transition-colors duration-500`} />
                           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none">

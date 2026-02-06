@@ -70,16 +70,16 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
                                 The `h4` and `p` with `app.name` and `app.desc` are not part of the current `LocationDetailProps` and would cause errors.
                                 I will only apply the contrast fix to the existing `p` tag.
                             */}
-                            <p className="text-xl md:text-2xl font-light text-dark dark:text-cream leading-relaxed mb-12 max-w-2xl" style={{ fontFamily: 'Lato, sans-serif' }}>
+                            <p className="text-xl md:text-2xl font-light text-themed-secondary leading-relaxed mb-12 max-w-2xl font-sans">
                                 {location.description}
                             </p>
 
                             {/* Stats Grid */}
                             <div className="grid grid-cols-2 gap-8 mb-16">
                                 {location.stats.map((stat, i) => (
-                                    <div key={i} className="p-6 bg-white/50 dark:bg-white/5 border border-dark/10 dark:border-white/10 rounded-2xl backdrop-blur-sm">
-                                        <div className="text-4xl font-serif text-accent mb-2">{stat.value}</div>
-                                        <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-dark dark:text-cream/50">{stat.label}</div>
+                    <div key={i} className="p-6 bg-themed-surface border border-themed rounded-2xl backdrop-blur-sm">
+                        <div className="text-4xl font-serif text-accent mb-2">{stat.value}</div>
+                        <div className="text-[11px] uppercase tracking-[0.2em] font-bold text-themed-tertiary">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>
@@ -102,13 +102,13 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.3, duration: 0.8 }}
-                            className="bg-white/80 dark:bg-charcoal/80 border border-dark/5 dark:border-white/5 rounded-3xl p-10 backdrop-blur-3xl shadow-2xl relative"
+                            className="bg-themed-secondary border border-themed rounded-3xl p-10 backdrop-blur-3xl shadow-themed-card relative"
                         >
                             <div className="absolute -top-6 -left-6 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white shadow-xl">
                                 <Shield size={24} />
                             </div>
 
-                            <h3 className="text-2xl font-serif text-dark dark:text-cream mb-8">Local Intelligence Protocol</h3>
+                            <h3 className="text-2xl font-serif text-themed mb-8">Local Intelligence Protocol</h3>
 
                             <div className="space-y-6">
                                 {location.features.map((feature, i) => (
@@ -116,15 +116,15 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
                                         <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent mt-1 group-hover:bg-accent group-hover:text-white transition-colors">
                                             <Activity size={12} />
                                         </div>
-                                        <p className="text-dark/90 dark:text-white/70 font-light leading-relaxed">
+                                        <p className="text-themed-secondary font-light leading-relaxed font-sans">
                                             {feature}
                                         </p>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="mt-12 pt-8 border-t border-dark/10 dark:border-white/10">
-                                <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-dark/70 dark:text-cream/50">
+                            <div className="mt-12 pt-8 border-t border-themed">
+                                <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-themed-tertiary">
                                     <Globe size={16} className="text-accent" />
                                     <span>discretion protocol active</span>
                                 </div>

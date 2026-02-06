@@ -22,8 +22,7 @@ const MobileIndustrySelector: React.FC<MobileIndustrySelectorProps> = ({ onSelec
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-xs font-mono uppercase tracking-[0.3em] mb-4 font-bold"
-          style={{ color: 'var(--color-accent)' }}
+          className="text-xs font-mono uppercase tracking-[0.3em] mb-4 font-bold text-accent"
         >
           Service Lines
         </motion.h4>
@@ -32,18 +31,16 @@ const MobileIndustrySelector: React.FC<MobileIndustrySelectorProps> = ({ onSelec
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-serif text-4xl text-dark dark:text-cream leading-tight tracking-tighter mb-6"
-          style={{ fontFamily: '"Playfair Display", serif' }}
+          className="font-serif text-4xl text-themed leading-tight tracking-tighter mb-6"
         >
-          Built for <span className="italic" style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-serif)' }}>Your Industry.</span>
+          Built for <span className="italic text-accent">Your Industry.</span>
         </motion.h3>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-base font-light leading-relaxed text-gray-700 dark:text-white/90"
-          style={{ fontSize: '17px', lineHeight: '22px' }}
+          className="text-base font-light leading-relaxed text-themed-secondary font-sans"
         >
           From customer communication outsourcing to executive operations management, we provide specialized support tailored to your industry.
         </motion.p>
@@ -62,41 +59,32 @@ const MobileIndustrySelector: React.FC<MobileIndustrySelectorProps> = ({ onSelec
               viewport={{ once: true, margin: "-20%" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => onSelectSector(sector.id)}
-              className="w-full text-left bg-white dark:bg-charcoal border border-dark/10 dark:border-white/5 shadow-[0_20px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.5)] p-6 flex flex-col gap-4 transition-all duration-500 hover:border-accent hover:scale-[1.02] relative overflow-hidden group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] rounded-lg"
+              className="w-full text-left bg-themed-secondary border border-themed shadow-themed-card p-6 flex flex-col gap-4 transition-all duration-500 hover:border-accent hover:scale-[1.02] relative overflow-hidden group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-lg"
             >
-              <div className="absolute inset-0 bg-white dark:bg-charcoal opacity-100 z-0" />
+              <div className="absolute inset-0 bg-themed-secondary opacity-100 z-0" />
 
               {/* Icon */}
               <div className="relative z-10 flex items-center gap-4">
-                <div
-                  className="w-16 h-16 bg-cream dark:bg-dark border border-dark/5 dark:border-white/10 rounded-full flex items-center justify-center transition-all duration-500 group-hover:bg-accent group-hover:border-accent flex-shrink-0"
-                  style={{ color: 'var(--color-accent)' }}
-                >
+                <div className="w-16 h-16 bg-themed border border-themed rounded-full flex items-center justify-center transition-all duration-500 group-hover:bg-accent group-hover:border-accent flex-shrink-0 text-accent">
                   <IconComponent size={28} strokeWidth={1} className="transition-colors duration-500 group-hover:text-white" />
                 </div>
 
                 {/* Title and Badge */}
                 <div className="flex-1">
-                  <h4
-                    className="text-xl transition-colors duration-500 group-hover:text-accent"
-                    style={{ fontFamily: 'var(--font-serif)', fontWeight: '600', color: '#19abe4' }}
-                  >
+                  <h4 className="text-xl font-serif font-semibold text-accent transition-colors duration-500 group-hover:text-accent">
                     {sector.title}
                   </h4>
                 </div>
               </div>
 
               {/* Description */}
-              <p
-                className="text-sm font-light italic relative z-10 leading-relaxed text-dark dark:text-cream/90"
-                style={{ fontFamily: 'Lato, sans-serif' }}
-              >
+              <p className="text-sm font-light italic relative z-10 leading-relaxed text-themed-secondary font-sans">
                 "{sector.subtitle}"
               </p>
 
               {/* Arrow */}
               <div className="flex justify-end relative z-10 mt-2">
-                <ArrowRight size={20} className="text-dark dark:text-cream group-hover:text-accent transition-all" />
+                <ArrowRight size={20} className="text-themed group-hover:text-accent transition-all" />
               </div>
             </motion.button>
           );

@@ -58,20 +58,23 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ compact = false }) => {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`flex items-center ${compact ? 'gap-2' : 'gap-4'} text-gray-900 dark:text-cream`}
+      className={`flex items-center ${compact ? 'gap-2' : 'gap-4'} text-themed`}
+      role="timer"
+      aria-live="polite"
+      aria-label={`Countdown: ${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.minutes} minutes remaining`}
     >
       {!compact && (
         <>
           {/* Limited Slots Label */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            <span className="text-xs uppercase tracking-widest font-bold whitespace-nowrap" style={{ color: 'rgba(208, 2, 27, 1)', fontFamily: 'Lato, sans-serif' }}>
+            <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
+            <span className="text-xs uppercase tracking-widest font-bold whitespace-nowrap text-red-600 font-sans">
               Limited Slots
             </span>
           </div>
 
           {/* Divider */}
-          <div className="w-px h-6 bg-gray-300 dark:bg-white/20" />
+          <div className="w-px h-6 bg-themed-elevated" />
         </>
       )}
 
@@ -81,34 +84,34 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ compact = false }) => {
           <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
             {String(timeLeft.days).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Days</div>
+          <div className={`${compact ? 'text-[9px]' : 'text-[11px]'} uppercase tracking-wider text-themed-tertiary`}>Days</div>
         </div>
 
-        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-themed-muted`}>:</span>
 
         <div className="text-center">
-          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight text-accent`}>
             {String(timeLeft.hours).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Hrs</div>
+          <div className={`${compact ? 'text-[9px]' : 'text-[11px]'} uppercase tracking-wider text-themed-tertiary`}>Hrs</div>
         </div>
 
-        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-themed-muted`}>:</span>
 
         <div className="text-center">
-          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight text-accent`}>
             {String(timeLeft.minutes).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Min</div>
+          <div className={`${compact ? 'text-[9px]' : 'text-[11px]'} uppercase tracking-wider text-themed-tertiary`}>Min</div>
         </div>
 
-        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-themed-muted`}>:</span>
 
         <div className="text-center">
-          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight text-accent`}>
             {String(timeLeft.seconds).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Sec</div>
+          <div className={`${compact ? 'text-[9px]' : 'text-[11px]'} uppercase tracking-wider text-themed-tertiary`}>Sec</div>
         </div>
       </div>
     </motion.div>

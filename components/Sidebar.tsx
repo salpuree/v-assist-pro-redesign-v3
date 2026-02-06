@@ -16,10 +16,10 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ isMenuOpen, setIsMenuOpen, isDarkMode, toggleTheme, onOpenProtocol, onHomeClick, onSelectSector }) => {
   return (
     <>
-      <aside className="fixed left-0 top-0 h-screen w-16 md:w-20 flex flex-col justify-between items-center py-8 transition-all duration-500 overflow-hidden" style={{ zIndex: 'var(--z-modal)' }}>
+      <aside className="fixed left-0 top-0 h-screen w-16 md:w-20 flex flex-col justify-between items-center py-8 transition-all duration-500 overflow-hidden z-[60]">
 
         {/* Liquid Glass Background Layer - Enhanced for Light Mode Visibility */}
-        <div className="absolute inset-0 bg-cream/95 dark:bg-dark/95 backdrop-blur-md border-r border-dark/5 dark:border-white/10 z-0 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-cream/95 dark:bg-dark/95 backdrop-blur-md border-r border-themed z-0 transition-colors duration-500" />
 
         {/* Animated Liquid Core - Optimized for Dark Mode Glow & Light Mode Presence */}
         <motion.div
@@ -39,9 +39,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isMenuOpen, setIsMenuOpen, isDarkMode
         {/* Logo removed - moved to banner */}
 
         {/* Menu Trigger */}
-        <div className="relative z-10 flex flex-col items-center select-none" style={{ gap: 'var(--sp-lg)', marginTop: '110px' }}>
+        <div className="relative z-10 flex flex-col items-center select-none gap-4 mt-28">
           <button
-            className="flex flex-col items-center cursor-pointer group transition-colors p-3 hover:bg-dark/5 dark:hover:bg-white/10 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+            className="flex flex-col items-center cursor-pointer group transition-colors p-3 hover:bg-dark/5 dark:hover:bg-white/10 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Toggle menu"
           >
@@ -58,12 +58,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isMenuOpen, setIsMenuOpen, isDarkMode
         </div>
 
         {/* Center - Theme Toggle */}
-        <div className="relative z-10 flex flex-col items-center" style={{ gap: 'var(--sp-5xl)' }}>
+        <div className="relative z-10 flex flex-col items-center gap-16">
           <button
             onClick={toggleTheme}
             aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-            className="w-12 h-12 rounded-full flex items-center justify-center text-dark dark:text-cream shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-accent hover:text-white dark:hover:bg-accent-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
-            style={{ backgroundColor: 'rgba(25, 195, 243, 0.23)', border: '0.5px solid rgb(25, 195, 243)' }}
+            className="w-12 h-12 rounded-full flex items-center justify-center text-themed shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-accent hover:text-white dark:hover:bg-accent-light bg-accent/20 border border-accent/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>

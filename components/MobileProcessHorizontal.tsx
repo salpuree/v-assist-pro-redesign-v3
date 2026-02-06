@@ -27,9 +27,9 @@ const MobileProcessHorizontal: React.FC = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={targetRef} id="methodology" className="relative bg-cream dark:bg-dark text-dark dark:text-cream py-16 px-4">
+    <section ref={targetRef} id="methodology" className="relative bg-cream dark:bg-dark text-themed py-16 px-4">
       {/* Animated Progress Line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-dark/10 dark:bg-white/10 z-0" />
+      <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-themed-elevated z-0" />
       <motion.div
         style={{ height: lineHeight }}
         className="absolute left-1/2 top-0 w-[1px] bg-accent shadow-[0_0_15px_rgba(25,171,228,0.6)] z-0 pointer-events-none"
@@ -43,7 +43,7 @@ const MobileProcessHorizontal: React.FC = () => {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <h2 className="text-4xl font-serif text-dark dark:text-cream" style={{ fontFamily: '"Playfair Display", serif' }}>
+          <h2 className="text-4xl font-serif text-themed">
             The <span className="text-accent">Methodology</span>
           </h2>
         </motion.div>
@@ -60,12 +60,12 @@ const MobileProcessHorizontal: React.FC = () => {
               <CircleDot size={18} className="animate-pulse" />
             </div>
             <div>
-              <p className="text-base md:text-lg font-light leading-relaxed text-dark/70 dark:text-cream/70" style={{ fontFamily: 'Lato, sans-serif' }}>
-                <span className="text-dark dark:text-cream">Talent is a variable. </span>
+              <p className="text-base md:text-lg font-light leading-relaxed text-themed-secondary font-sans">
+                <span className="text-themed">Talent is a variable. </span>
                 <span className="text-accent italic font-medium">Infrastructure is a constant.</span>
               </p>
-              <p className="text-base font-light leading-relaxed mt-2 text-dark/60 dark:text-cream/60" style={{ fontFamily: 'Lato, sans-serif' }}>
-                We replace hero-dependency with the <span className="text-dark dark:text-cream font-medium">Ghost Engine</span>—a custom-engineered system of elite personnel and human-led protocols.
+              <p className="text-base font-light leading-relaxed mt-2 text-themed-tertiary font-sans">
+                We replace hero-dependency with the <span className="text-themed font-medium">Ghost Engine</span>—a custom-engineered system of elite personnel and human-led protocols.
               </p>
             </div>
           </div>
@@ -84,7 +84,7 @@ const MobileProcessHorizontal: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-20%" }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-charcoal border border-dark/10 dark:border-white/5 rounded-lg p-6 shadow-[0_10px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.3)] group hover:border-accent/30 transition-all duration-500 relative overflow-hidden"
+              className="bg-themed-secondary border border-themed rounded-lg p-6 shadow-themed-card group hover:border-accent/30 transition-all duration-500 relative overflow-hidden"
             >
               {/* Hover Background Gradient */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_var(--tw-gradient-stops))] from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
@@ -103,7 +103,7 @@ const MobileProcessHorizontal: React.FC = () => {
                     transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
                   />
 
-                  <div className="w-16 h-16 bg-cream dark:bg-dark border border-dark/10 dark:border-white/10 rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                  <div className="w-16 h-16 bg-themed border border-themed rounded-2xl flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500">
                     <IconComponent strokeWidth={1.5} size={28} />
                   </div>
 
@@ -117,8 +117,7 @@ const MobileProcessHorizontal: React.FC = () => {
 
                   {/* Step Number Badge */}
                   <div
-                    className="absolute -top-2 -right-2 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center text-xs font-bold"
-                    style={{ fontFamily: 'Lato, sans-serif' }}
+                    className="absolute -top-2 -right-2 w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center text-xs font-bold font-sans"
                   >
                     {step.number}
                   </div>
@@ -126,16 +125,10 @@ const MobileProcessHorizontal: React.FC = () => {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3
-                    className="text-xl md:text-2xl font-serif mb-2 tracking-tight group-hover:text-accent transition-colors duration-500"
-                    style={{ fontFamily: '"Playfair Display", serif', color: '#19abe4' }}
-                  >
+                  <h3 className="text-xl md:text-2xl font-serif mb-2 tracking-tight group-hover:text-accent transition-colors duration-500 text-accent">
                     {step.title}
                   </h3>
-                  <p
-                    className="text-sm md:text-base font-light leading-relaxed text-dark/70 dark:text-cream/70"
-                    style={{ fontFamily: 'Lato, sans-serif' }}
-                  >
+                  <p className="text-sm md:text-base font-light leading-relaxed text-themed-secondary font-sans">
                     {step.description}
                   </p>
 

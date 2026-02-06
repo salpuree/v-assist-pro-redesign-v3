@@ -93,7 +93,7 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
         </div>
 
         {/* Hero Image with Testimonial Overlay */}
-        <div className="mb-20 relative overflow-hidden rounded-xl h-[400px] md:h-[550px] shadow-2xl border border-dark/5 dark:border-white/5">
+        <div className="mb-20 relative overflow-hidden rounded-xl h-[400px] md:h-[550px] shadow-2xl border border-themed-subtle">
           <img
             src={sector.imagePlaceholder}
             alt={sector.title}
@@ -116,7 +116,7 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
                     </span>
                   )}
                 </div>
-                <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-6 italic" style={{ fontFamily: '"Playfair Display", serif' }}>
+                <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-6 italic">
                   "{sector.testimonial.quote}"
                 </blockquote>
                 <div>
@@ -154,8 +154,8 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
 
         {/* The Vortex Solution - Multiple Solutions */}
         <div className="mb-32">
-          <h2 className="font-serif text-4xl md:text-5xl text-dark dark:text-cream mb-6" style={{ fontFamily: '"Playfair Display", serif' }}>The Vortex Solution</h2>
-          <p className="text-lg text-dark dark:text-white mb-12 max-w-3xl" style={{ fontFamily: 'Lato, sans-serif' }}>
+          <h2 className="font-serif text-4xl md:text-5xl text-themed mb-6">The Vortex Solution</h2>
+          <p className="text-lg text-themed-secondary mb-12 max-w-3xl font-sans">
             {sector.protocol.description}
           </p>
 
@@ -174,8 +174,8 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
                     <Check className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-dark dark:text-cream mb-2">{solution.title}</h4>
-                    <p className="text-sm text-dark dark:text-white leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>{solution.description}</p>
+                    <h4 className="font-bold text-lg text-themed mb-2">{solution.title}</h4>
+                    <p className="text-sm text-themed-secondary leading-relaxed font-sans">{solution.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -191,15 +191,15 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
                 <TrendingUp size={24} className="text-accent" />
                 <span className="text-xs uppercase tracking-widest font-bold text-accent">Case Study</span>
               </div>
-              <h3 className="font-serif text-3xl md:text-4xl text-dark dark:text-cream mb-4" style={{ fontFamily: '"Playfair Display", serif' }}>
+              <h3 className="font-serif text-3xl md:text-4xl text-themed mb-4">
                 {sector.caseStudy.title}
               </h3>
-              <p className="text-lg text-dark dark:text-white mb-8 leading-relaxed max-w-3xl" style={{ fontFamily: 'Lato, sans-serif' }}>
+              <p className="text-lg text-themed-secondary mb-8 leading-relaxed max-w-3xl font-sans">
                 {sector.caseStudy.outcome}
               </p>
               <div className="flex flex-wrap gap-4">
                 {sector.caseStudy.metrics.map((metric, i) => (
-                  <div key={i} className="px-4 py-2 bg-white dark:bg-white/10 border border-dark/10 dark:border-white/20 rounded-sm text-sm font-semibold text-dark dark:text-cream">
+                  <div key={i} className="px-4 py-2 bg-themed-secondary border border-themed rounded-sm text-sm font-semibold text-themed">
                     {metric}
                   </div>
                 ))}
@@ -211,10 +211,10 @@ const SectorDetail: React.FC<SectorDetailProps> = ({ sector, onBack, onOpenProto
 
         {/* CTA Section */}
         <div className="bg-accent/5 border border-accent/20 p-12 md:p-16 text-center">
-          <h3 className="font-serif text-3xl md:text-4xl text-dark dark:text-cream mb-6" style={{ fontFamily: '"Playfair Display", serif' }}>
+          <h3 className="font-serif text-3xl md:text-4xl text-themed mb-6">
             Ready to Eliminate the Noise?
           </h3>
-          <p className="text-lg text-dark dark:text-white mb-8 max-w-2xl mx-auto" style={{ fontFamily: 'Lato, sans-serif' }}>
+          <p className="text-lg text-themed-secondary mb-8 max-w-2xl mx-auto font-sans">
             Join forward-thinking leaders who've reclaimed their focus and scaled without the operational burden.
           </p>
           <button

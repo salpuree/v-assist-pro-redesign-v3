@@ -79,7 +79,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
                 alt="V Assist Pro"
                 className="h-6 w-auto object-contain block dark:hidden"
               />
-              <span className="text-[7px] uppercase tracking-[0.2em] font-bold text-dark/30 dark:text-white/30" style={{ fontFamily: 'Lato, sans-serif' }}>
+              <span className="text-[8px] uppercase tracking-[0.2em] font-bold text-themed-muted font-sans">
                 EST. 2008
               </span>
             </div>
@@ -97,10 +97,10 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           </div>
 
           {/* Bottom row - Countdown Timer */}
-          <div className="flex items-center justify-center gap-3 mt-2 pt-2 border-t border-dark/5 dark:border-white/5">
+          <div className="flex items-center justify-center gap-3 mt-2 pt-2 border-t border-themed-subtle">
             <div className="flex items-center gap-2">
-              <Lock size={10} style={{ color: 'rgba(208, 2, 27, 1)' }} />
-              <span className="text-dark dark:text-cream text-[8px] uppercase tracking-[0.15em] font-bold" style={{ fontFamily: 'Lato, sans-serif' }}>
+              <Lock size={10} className="text-red-600" />
+              <span className="text-themed text-[9px] uppercase tracking-[0.15em] font-bold font-sans">
                 Exclusive Onboarding
               </span>
             </div>
@@ -119,8 +119,8 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex items-center gap-3 mb-3"
         >
-          <Sparkles size={14} className="animate-pulse" style={{ color: 'var(--color-accent)' }} />
-          <span style={{ letterSpacing: '2px', fontSize: '9px', fontWeight: '700', color: '#17aee7', fontFamily: 'Lato, sans-serif', textTransform: 'uppercase', textAlign: 'center' }}>
+          <Sparkles size={14} className="animate-pulse text-accent" />
+          <span className="tracking-[2px] text-[9px] font-bold text-accent font-sans uppercase text-center">
             Customer Communications & Executive Operations, Handled
           </span>
         </motion.div>
@@ -132,15 +132,13 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-4"
         >
-          <h1 className="font-serif text-dark dark:text-cream" style={{ marginBottom: '-1px' }}>
-            <p style={{ font: '600 48px/48px Playfair Display, serif', letterSpacing: '-2px', marginBottom: '8px' }}>
+          <h1 className="font-serif text-themed">
+            <span className="block text-5xl leading-[48px] font-semibold tracking-tighter mb-2">
               Your focus,
-            </p>
-            <div className="italic block">
-              <p style={{ font: '600 44px/48px Playfair Display, serif', letterSpacing: '-2px', color: 'var(--color-accent)' }}>
-                Uninterrupted.
-              </p>
-            </div>
+            </span>
+            <span className="block italic text-accent text-[44px] leading-[48px] font-semibold tracking-tighter">
+              Uninterrupted.
+            </span>
           </h1>
         </motion.div>
 
@@ -151,16 +149,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mb-5 max-w-sm"
         >
-          <div
-            className="text-dark dark:text-cream/90 text-center"
-            style={{
-              fontFamily: 'Lato, sans-serif',
-              fontWeight: '400',
-              fontSize: '16px',
-              lineHeight: '22px',
-              marginTop: '-5px',
-            }}
-          >
+          <div className="text-themed-secondary text-center font-sans text-base leading-relaxed">
             <p className="mb-4">
               Whether you run a limo fleet, manage a family office, or close million-dollar deals, one problem persists: <span className="font-semibold italic">operational noise drowns out what matters.</span>
             </p>
@@ -185,10 +174,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-          <span
-            className="relative z-20 uppercase tracking-[0.15em] text-xs font-bold text-white"
-            style={{ fontFamily: 'Lato, sans-serif' }}
-          >
+          <span className="relative z-20 uppercase tracking-[0.15em] text-xs font-bold text-white font-sans">
             Secure Your Slot
           </span>
           <ArrowRight className="relative z-20 w-4 h-4 group-hover:translate-x-1 transition-all duration-500 text-white" />
@@ -203,12 +189,12 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
         >
           <div className="flex items-center gap-1.5">
             <ShieldCheck size={10} className="text-accent" />
-            <span className="text-[9px] uppercase tracking-wider font-bold text-dark/70 dark:text-cream/60">100% Confidential</span>
+            <span className="text-[10px] uppercase tracking-wider font-bold text-themed-tertiary">100% Confidential</span>
           </div>
-          <div className="w-1 h-1 bg-dark/20 dark:bg-white/20 rounded-full" />
+          <div className="w-1 h-1 bg-themed-faint rounded-full" />
           <div className="flex items-center gap-1.5">
             <Lock size={10} className="text-accent" />
-            <span className="text-[9px] uppercase tracking-wider font-bold text-dark/70 dark:text-cream/60">30-Day Guarantee</span>
+            <span className="text-[10px] uppercase tracking-wider font-bold text-themed-tertiary">30-Day Guarantee</span>
           </div>
         </motion.div>
 
@@ -221,10 +207,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           className="w-full px-6 py-4 flex items-center justify-center gap-2 border-2 border-accent/40 hover:border-accent text-accent dark:text-accent-light rounded-lg transition-all duration-500 bg-transparent hover:bg-accent/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent mb-6"
         >
           <Download size={16} />
-          <span
-            className="uppercase tracking-[0.1em] text-xs font-semibold"
-            style={{ fontFamily: 'Lato, sans-serif' }}
-          >
+          <span className="uppercase tracking-[0.1em] text-xs font-semibold font-sans">
             Get Free Operations Guide
           </span>
         </motion.button>
@@ -236,37 +219,19 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
-          className="bg-white/95 dark:bg-charcoal/80 backdrop-blur-3xl border border-dark/10 dark:border-white/5 shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.12)] rounded-xl group w-full max-w-sm"
-          style={{ padding: '24px 20px' }}
+          className="bg-themed-secondary backdrop-blur-3xl border border-themed shadow-themed-card rounded-xl group w-full max-w-sm p-6"
         >
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all flex-shrink-0">
               <ShieldCheck size={20} />
             </div>
             <div className="flex-1">
-              <h4
-                className="text-dark dark:text-white mb-2"
-                style={{
-                  fontFamily: 'Lato, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  fontStyle: 'italic',
-                }}
-              >
+              <h4 className="text-themed mb-2 font-sans text-base font-semibold italic">
                 Human Intelligence
               </h4>
-              <div
-                className="text-dark/90 dark:text-white text-sm"
-                style={{
-                  fontFamily: 'Lato, sans-serif',
-                  fontWeight: '400',
-                  lineHeight: '18px',
-                }}
-              >
-                <p>
-                  We are a boutique firm of people, not software. We learn your voice and preferences, and the rhythm of your business.
-                </p>
-              </div>
+              <p className="text-themed-secondary text-sm font-sans leading-relaxed">
+                We are a boutique firm of people, not software. We learn your voice and preferences, and the rhythm of your business.
+              </p>
             </div>
           </div>
         </motion.div>

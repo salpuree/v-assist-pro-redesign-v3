@@ -29,25 +29,25 @@ const ProcessHorizontal: React.FC = () => {
   const lineWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={targetRef} id="methodology" className="relative h-[500vh] bg-cream dark:bg-dark text-dark dark:text-cream">
+    <section ref={targetRef} id="methodology" className="relative h-[500vh] bg-cream dark:bg-dark text-themed">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
 
         {/* Connection Line (The Ghost Flow) */}
-        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-dark/5 dark:bg-white/5 z-0 pointer-events-none" />
+        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-themed-elevated z-0 pointer-events-none" />
         <motion.div
           style={{ width: lineWidth }}
           className="absolute top-1/2 left-0 h-[1px] bg-accent shadow-[0_0_15px_rgba(0,95,115,0.5)] z-0 pointer-events-none"
         />
 
         <div className="absolute top-12 left-6 md:left-24 z-10 pointer-events-none">
-          <h2 className="text-4xl md:text-6xl font-serif text-dark dark:text-cream" style={{ fontFamily: '"Playfair Display", serif' }}>
-            <span className="italic text-gray-900/50 dark:text-cream/60">How It Works</span>
+          <h2 className="text-4xl md:text-6xl font-serif text-themed">
+            <span className="italic opacity-60">How It Works</span>
           </h2>
         </div>
 
         <motion.div style={{ x }} className="flex gap-0">
           {/* Intro Card */}
-          <div className="h-screen w-screen flex-shrink-0 flex items-center justify-center p-12 border-r border-dark/10 dark:border-white/10 relative">
+          <div className="h-screen w-screen flex-shrink-0 flex items-center justify-center p-12 border-r border-themed relative">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_var(--tw-gradient-stops))] from-accent/5 to-transparent pointer-events-none"></div>
 
             {/* Spinning Schematic Element */}
@@ -61,16 +61,14 @@ const ProcessHorizontal: React.FC = () => {
               <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center text-accent mb-12 border border-accent/30 shadow-2xl">
                 <CircleDot className="animate-pulse" size={32} />
               </div>
-              <div className="text-xl md:text-4xl font-light leading-relaxed mb-6 text-dark dark:text-cream">
-                <span style={{ fontFamily: 'Lato, sans-serif' }}>Talent is a variable. </span>
+              <div className="text-xl md:text-4xl font-light leading-relaxed mb-6 text-themed font-sans">
+                <span>Talent is a variable. </span>
                 <br />
-                <span className="italic" style={{ color: 'rgba(25, 171, 228, 1)', fontFamily: 'Lato, sans-serif' }}>Infrastructure is a constant.</span>
+                <span className="italic text-accent">Infrastructure is a constant.</span>
               </div>
-              <div className="text-lg text-gray-900 dark:text-cream/80 font-light leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
-                <span>We replace hero-dependency with the </span>
-                <span className="text-dark dark:text-cream font-medium">Ghost Engine</span>
-                <span>—a custom-engineered system of elite personnel and human-led protocols that converts administrative friction into scalable assets.</span>
-              </div>
+              <p className="text-lg text-themed-secondary font-light leading-relaxed font-sans">
+                We replace hero-dependency with the <span className="text-themed font-medium">Ghost Engine</span>—a custom-engineered system of elite personnel and human-led protocols that converts administrative friction into scalable assets.
+              </p>
               <div className="mt-12 flex items-center gap-4 text-[10px] font-mono tracking-[0.4em] text-accent font-bold">
                 <span>SCROLL TO EXPLORE ARCHITECTURE</span>
                 <ArrowRight size={14} className="animate-bounce-x" />
@@ -82,7 +80,7 @@ const ProcessHorizontal: React.FC = () => {
           {PROCESS_STEPS.map((step) => {
             const IconComponent = icons[step.number as keyof typeof icons];
             return (
-              <div key={step.number} className="h-screen w-screen flex-shrink-0 flex items-center justify-center p-6 md:p-24 border-r border-dark/10 dark:border-white/10 relative overflow-hidden group">
+              <div key={step.number} className="h-screen w-screen flex-shrink-0 flex items-center justify-center p-6 md:p-24 border-r border-themed relative overflow-hidden group">
                 {/* Visual "Node" Graphic */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none">
                   <div className="absolute inset-0 bg-accent/5 rounded-full blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
@@ -109,7 +107,7 @@ const ProcessHorizontal: React.FC = () => {
                       <div className="absolute inset-8 border border-white/5 rounded-full animate-slow-spin" />
 
                       {/* Floating Icon */}
-                      <div className="relative z-20 w-24 h-24 bg-cream dark:bg-dark border border-dark/10 dark:border-white/10 rounded-3xl flex items-center justify-center text-accent shadow-2xl shadow-accent/20 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-500">
+                      <div className="relative z-20 w-24 h-24 bg-themed border border-themed rounded-3xl flex items-center justify-center text-accent shadow-2xl shadow-accent/20 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-500">
                         <IconComponent strokeWidth={1} size={48} />
                       </div>
 
@@ -125,8 +123,8 @@ const ProcessHorizontal: React.FC = () => {
                       <span className="text-xs font-mono text-accent font-bold tracking-[0.3em]">PHASE {step.number}</span>
                       <div className="h-[1px] w-12 bg-accent/30"></div>
                     </div>
-                    <h3 className="text-5xl md:text-8xl font-serif mb-8 tracking-tight group-hover:text-accent transition-colors duration-500 text-dark dark:text-cream" style={{ fontFamily: '"Playfair Display", serif' }}>{step.title}</h3>
-                    <p className="text-xl md:text-2xl font-light text-gray-900 dark:text-cream leading-relaxed border-l border-accent/30 pl-8 max-w-lg" style={{ fontFamily: 'Lato, sans-serif' }}>
+                    <h3 className="text-5xl md:text-8xl font-serif mb-8 tracking-tight group-hover:text-accent transition-colors duration-500 text-themed">{step.title}</h3>
+                    <p className="text-xl md:text-2xl font-light text-themed-secondary leading-relaxed border-l border-accent/30 pl-8 max-w-lg font-sans">
                       {step.description}
                     </p>
 
