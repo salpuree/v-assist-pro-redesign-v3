@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 /**
  * FrameConnector - Draws one continuous thin stroke connecting the
  * header bottom border to the sidebar right border via a smooth bezier curve.
+ * Includes a subtle accent glow node at the curve's apex for visual interest.
  *
  * Desktop only (hidden on mobile).
  * Uses window dimensions so the line always reaches the edges of the viewport.
@@ -31,6 +32,10 @@ const FrameConnector: React.FC = () => {
     `L ${sidebarW} ${dims.h}`,                                  // vertical line down to viewport bottom
   ].join(' ');
 
+  // The midpoint of the curve for the glow node
+  const glowX = sidebarW + curveR * 0.3;
+  const glowY = headerH + curveR * 0.3;
+
   return (
     <svg
       className="fixed inset-0 pointer-events-none z-[61] hidden md:block"
@@ -40,11 +45,35 @@ const FrameConnector: React.FC = () => {
       fill="none"
       aria-hidden="true"
     >
+      <defs>
+        <radialGradient id="curve-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="rgba(25, 171, 228, 0.5)" />
+          <stop offset="60%" stopColor="rgba(25, 171, 228, 0.1)" />
+          <stop offset="100%" stopColor="rgba(25, 171, 228, 0)" />
+        </radialGradient>
+      </defs>
+
+      {/* Main frame line */}
       <path
         d={d}
         stroke="var(--border-default)"
         strokeWidth="1"
         fill="none"
+      />
+
+      {/* Subtle glow node at the curve's bend point */}
+      <circle
+        cx={glowX}
+        cy={glowY}
+        r="20"
+        fill="url(#curve-glow)"
+      />
+      {/* Tiny solid accent dot at the exact curve midpoint */}
+      <circle
+        cx={glowX}
+        cy={glowY}
+        r="2"
+        fill="rgba(25, 171, 228, 0.7)"
       />
     </svg>
   );
