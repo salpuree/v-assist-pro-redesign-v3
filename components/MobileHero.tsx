@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, ShieldCheck, Lock, Menu, Download } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, Lock, Download } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
 import LeadMagnetGuide from './LeadMagnetGuide';
 
@@ -17,7 +17,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
   const [isGuideOpen, setIsGuideOpen] = useState(false);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col bg-cream dark:bg-dark transition-colors duration-500 pb-24 pt-24">
+    <section id="home" className="relative min-h-screen flex flex-col bg-cream dark:bg-dark transition-colors duration-500 pb-28 pt-20">
       {/* Simplified Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cream via-white to-cream dark:from-dark dark:via-charcoal dark:to-dark" />
@@ -62,13 +62,13 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 right-0 z-40 px-4 py-2 cursor-pointer group overflow-hidden border-b border-dark/5 dark:border-white/5 backdrop-blur-md bg-cream/70 dark:bg-dark/80"
+        className="fixed top-0 left-0 right-0 z-40 px-4 py-3 cursor-pointer group border-b border-dark/5 dark:border-white/5 backdrop-blur-md bg-cream/70 dark:bg-dark/80"
       >
         <div className="flex flex-col gap-2">
-          {/* Top row - Logo and Scarcity Info */}
-          <div className="flex items-center justify-between px-1 py-1 gap-2">
-            {/* Logo and Menu Section - left */}
-            <div className="flex flex-col items-center gap-1">
+          {/* Top row - Logo and JOIN NOW */}
+          <div className="flex items-center justify-between px-1 gap-2">
+            {/* Logo Section - left */}
+            <div className="flex flex-col items-start gap-0.5">
               <img
                 src={logoDark}
                 alt="V Assist Pro"
@@ -79,33 +79,31 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
                 alt="V Assist Pro"
                 className="h-6 w-auto object-contain block dark:hidden"
               />
-              {/* Menu button under logo */}
-              <button
-                className="flex flex-col gap-1 items-start mt-1 p-2 hover:bg-dark/5 dark:hover:bg-white/10 rounded transition-colors group"
-                onClick={() => setIsMenuOpen?.(true)}
-                aria-label="Toggle menu"
-              >
-                <span className="block w-6 h-[2.5px] bg-accent dark:bg-accent-light transition-colors rounded-full"></span>
-                <span className="block w-4 h-[2.5px] bg-accent dark:bg-accent-light transition-colors rounded-full"></span>
-                <span className="block w-6 h-[2.5px] bg-accent dark:bg-accent-light transition-colors rounded-full"></span>
-              </button>
+              <span className="text-[7px] uppercase tracking-[0.2em] font-bold text-dark/30 dark:text-white/30" style={{ fontFamily: 'Lato, sans-serif' }}>
+                EST. 2008
+              </span>
             </div>
 
-            {/* Right side - Exclusive Onboarding and Countdown Timer */}
-            <div className="flex flex-col items-end gap-2 pr-2">
-              {/* Exclusive Onboarding */}
-              <div className="flex items-center gap-2">
-                <Lock size={10} style={{ color: 'rgba(208, 2, 27, 1)' }} />
-                <span className="text-dark dark:text-cream text-[9px] uppercase tracking-[0.15em] font-bold" style={{ fontFamily: 'Lato, sans-serif' }}>
-                  Exclusive Onboarding
-                </span>
-              </div>
+            {/* Right side - JOIN NOW button */}
+            <button
+              onClick={onOpenProtocol}
+              className="px-5 py-2 bg-accent text-white uppercase tracking-widest text-[10px] font-bold rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-accent/25 whitespace-nowrap"
+              style={{ fontFamily: 'Lato, sans-serif' }}
+            >
+              Join Now
+            </button>
+          </div>
 
-              {/* Countdown Timer - Functional for Mobile */}
-              <div className="scale-90 origin-right">
-                <CountdownTimer compact={true} />
-              </div>
+          {/* Bottom row - Countdown Timer */}
+          <div className="flex items-center justify-center gap-3 mt-2 pt-2 border-t border-dark/5 dark:border-white/5">
+            <div className="flex items-center gap-2">
+              <Lock size={10} style={{ color: 'rgba(208, 2, 27, 1)' }} />
+              <span className="text-dark dark:text-cream text-[8px] uppercase tracking-[0.15em] font-bold" style={{ fontFamily: 'Lato, sans-serif' }}>
+                Exclusive Onboarding
+              </span>
             </div>
+            <div className="w-px h-3 bg-dark/20 dark:bg-white/20" />
+            <CountdownTimer compact={true} />
           </div>
         </div>
       </motion.div>

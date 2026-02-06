@@ -78,37 +78,37 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ compact = false }) => {
       {/* Countdown Display */}
       <div className={`flex items-center ${compact ? 'gap-2' : 'gap-1 md:gap-2'}`}>
         <div className="text-center">
-          <div className={`${compact ? 'text-lg md:text-xl' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
             {String(timeLeft.days).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[9px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Days</div>
+          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Days</div>
         </div>
 
-        <span className={`${compact ? 'text-sm' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
 
         <div className="text-center">
-          <div className={`${compact ? 'text-lg md:text-xl' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
             {String(timeLeft.hours).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[9px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Hrs</div>
+          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Hrs</div>
         </div>
 
-        <span className={`${compact ? 'text-sm' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
 
         <div className="text-center">
-          <div className={`${compact ? 'text-lg md:text-xl' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
             {String(timeLeft.minutes).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[9px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Min</div>
+          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Min</div>
         </div>
 
-        <span className={`${compact ? 'text-sm' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
+        <span className={`${compact ? 'text-xs' : 'text-sm'} font-serif text-gray-400 dark:text-white/30`}>:</span>
 
         <div className="text-center">
-          <div className={`${compact ? 'text-lg md:text-xl' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
+          <div className={`${compact ? 'text-base md:text-lg' : 'text-base md:text-xl'} font-bold font-serif leading-tight`} style={{ color: 'rgba(25, 171, 228, 1)' }}>
             {String(timeLeft.seconds).padStart(2, '0')}
           </div>
-          <div className={`${compact ? 'text-[9px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Sec</div>
+          <div className={`${compact ? 'text-[8px]' : 'text-[10px]'} uppercase tracking-wider text-gray-700 dark:text-cream/60`}>Sec</div>
         </div>
       </div>
     </motion.div>
