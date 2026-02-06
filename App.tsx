@@ -99,7 +99,7 @@ const App: React.FC = () => {
         onClose={() => setIsProtocolOpen(false)}
       />
 
-      <main className="pt-[68px]">
+      <main className="pt-0 md:pt-[68px]">
         <AnimatePresence mode="wait">
           {selectedSector ? (
             <SectorDetail
