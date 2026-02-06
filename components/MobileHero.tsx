@@ -84,13 +84,15 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
               </span>
             </div>
 
-            {/* Right side - JOIN NOW button */}
+            {/* Right side - Hamburger menu */}
             <button
-              onClick={onOpenProtocol}
-              className="px-5 py-2 bg-accent text-white uppercase tracking-widest text-[10px] font-bold rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-accent/25 whitespace-nowrap"
-              style={{ fontFamily: 'Lato, sans-serif' }}
+              className="flex flex-col gap-1 items-end p-2 hover:bg-dark/5 dark:hover:bg-white/10 rounded transition-colors"
+              onClick={() => setIsMenuOpen?.(true)}
+              aria-label="Toggle menu"
             >
-              Join Now
+              <span className="block w-6 h-[2.5px] bg-accent dark:bg-accent-light rounded-full" />
+              <span className="block w-4 h-[2.5px] bg-accent dark:bg-accent-light rounded-full" />
+              <span className="block w-6 h-[2.5px] bg-accent dark:bg-accent-light rounded-full" />
             </button>
           </div>
 
