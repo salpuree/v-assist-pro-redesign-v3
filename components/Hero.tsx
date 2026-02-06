@@ -51,15 +51,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
           transition={prefersReducedMotion ? {} : { duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0"
           style={{
-            backgroundImage: `radial-gradient(circle, rgba(25, 171, 228, 0.35) 1px, transparent 1px), radial-gradient(circle, rgba(0, 0, 0, 0.12) 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle, rgba(25, 171, 228, 0.35) 1px, transparent 1px), radial-gradient(circle, var(--fg-faint) 1px, transparent 1px)`,
             backgroundSize: '32px 32px, 32px 32px',
             backgroundPosition: '0 0, 0 0',
           }}
         />
 
         {/* ===== GRADIENT ORBS - Soft depth elements ===== */}
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] dark:bg-cyan-500/5 animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] dark:bg-blue-500/5" />
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full blur-[120px] animate-pulse bg-accent/20 dark:bg-cyan-500/5" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full blur-[150px] bg-accent/15 dark:bg-blue-500/5" />
       </div>
 
 
@@ -70,11 +70,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
         <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
           {/* Wave 1 - Top position */}
           <motion.svg
-            className="wave-container absolute top-[5%] left-0 w-[200%] h-48 opacity-15 dark:opacity-7"
+            className="wave-container absolute top-[5%] left-0 w-[200%] h-48"
             viewBox="0 0 1000 200"
             preserveAspectRatio="none"
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0.08, 0.18, 0.08] }}
+            animate={{ opacity: [0.15, 0.35, 0.15] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
             <path
@@ -88,11 +88,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
 
           {/* Wave 2 - Middle position */}
           <motion.svg
-            className="wave-container absolute top-[35%] left-0 w-[200%] h-48 opacity-12 dark:opacity-6"
+            className="wave-container absolute top-[35%] left-0 w-[200%] h-48"
             viewBox="0 0 1000 200"
             preserveAspectRatio="none"
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0.05, 0.15, 0.05] }}
+            animate={{ opacity: [0.1, 0.28, 0.1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           >
             <path
@@ -106,11 +106,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
 
           {/* Wave 3 - Bottom position */}
           <motion.svg
-            className="wave-container absolute bottom-[10%] left-0 w-[200%] h-56 opacity-15 dark:opacity-7"
+            className="wave-container absolute bottom-[10%] left-0 w-[200%] h-56"
             viewBox="0 0 1000 200"
             preserveAspectRatio="none"
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0.08, 0.18, 0.08] }}
+            animate={{ opacity: [0.12, 0.3, 0.12] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           >
             <path
