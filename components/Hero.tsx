@@ -259,31 +259,43 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
         </div>
       </div>
 
-      {/* Floating Onboarding Protocol */}
+      {/* Floating Onboarding Protocol - 3-step journey indicator */}
+      {/* Step 1 "Secure Slot" opens the consultation form. Steps 2 & 3 show what comes next. */}
       <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 z-30 hidden md:flex">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="glass-panel flex items-center gap-12 px-12 py-6 rounded-3xl shadow-themed-elevated"
+          role="navigation"
+          aria-label="Onboarding steps"
         >
           {[
-            { label: 'Secure Slot', status: 'Current' },
-            { label: 'Qualification Call', status: 'Pending' },
-            { label: 'Onboarding', status: 'Pending' }
+            { label: 'Secure Slot', desc: 'Reserve your spot now', actionable: true },
+            { label: 'Qualification Call', desc: 'We assess mutual fit', actionable: false },
+            { label: 'Onboarding', desc: 'Your team is deployed', actionable: false }
           ].map((step, i) => (
             <React.Fragment key={step.label}>
-              <div className="flex items-center gap-4 group cursor-pointer">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold border transition-all duration-500 ${i === 0 ? 'bg-accent border-accent text-white shadow-[0_0_25px_rgba(25,171,228,0.5)] scale-110' : 'border-themed text-themed-muted group-hover:border-themed-strong group-hover:text-themed-tertiary'}`}>
+              <button
+                type="button"
+                onClick={step.actionable ? onOpenProtocol : undefined}
+                disabled={!step.actionable}
+                aria-current={i === 0 ? 'step' : undefined}
+                className={`flex items-center gap-4 group transition-all duration-300 ${step.actionable ? 'cursor-pointer hover:scale-105' : 'cursor-default'}`}
+              >
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold border transition-all duration-500 ${i === 0 ? 'bg-accent border-accent text-white shadow-[0_0_25px_rgba(25,171,228,0.5)] scale-110' : 'border-themed text-themed-muted'}`}>
                   {i + 1}
                 </div>
-                <div className="flex flex-col">
-                  <span className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-colors ${i === 0 ? 'text-themed' : 'text-themed-muted group-hover:text-themed-tertiary'}`}>
+                <div className="flex flex-col text-left">
+                  <span className={`text-[10px] uppercase tracking-[0.2em] font-bold transition-colors ${i === 0 ? 'text-themed' : 'text-themed-muted'}`}>
                     {step.label}
                   </span>
-                  {i === 0 && <span className="text-[9px] text-accent font-bold uppercase tracking-tighter animate-pulse">Action Required</span>}
+                  {i === 0
+                    ? <span className="text-[9px] text-accent font-bold uppercase tracking-tighter animate-pulse">Action Required</span>
+                    : <span className="text-[8px] text-themed-muted uppercase tracking-wider">{step.desc}</span>
+                  }
                 </div>
-              </div>
+              </button>
               {i < 2 && <ArrowRight size={14} className="text-themed-faint" />}
             </React.Fragment>
           ))}
