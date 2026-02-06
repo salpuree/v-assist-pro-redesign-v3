@@ -156,7 +156,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                 <div className="flex items-center gap-6 mb-4">
                   <Sparkles size={16} className="animate-pulse text-accent" />
                   <div className="h-[1px] w-12 bg-accent/30"></div>
-                  <span className="tracking-[3px] text-[11px] font-bold text-accent font-sans uppercase">Customer Communications & Executive Operations, Handled</span>
+                  <span className="tracking-[3px] text-[11px] font-bold text-accent font-sans uppercase">Executive Operations & Client Communications, Handled</span>
                 </div>
 
                 <h1 className="font-serif text-themed">
@@ -174,13 +174,13 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                 <div className="text-themed-secondary font-sans text-xl leading-7 mb-12">
                   <div>
                     <p className="mb-4">
-                      Whether you run a limo fleet, manage a family office, or close million-dollar deals, one problem persists: <span className="font-semibold italic">operational noise drowns out what matters.</span>
+                      Whether you run a luxury fleet, manage a family office, or close million-dollar deals, one problem persists: <span className="font-semibold italic">operational noise drowns out what matters.</span>
                     </p>
                     <p className="text-accent font-bold uppercase tracking-widest text-sm mb-6">
-                      Save 15+ hours/week • Reduce operational noise by 70%
+                      Save 15+ hours/week  &bull;  Reduce operational noise by 70%
                     </p>
                     <p>
-                      We handle your customer communications and operational coordination so you can stay focused on growth and strategy.
+                      We deploy dedicated human partners who own your communications and operations -- so you stay focused on growth, strategy, and the people who matter.
                     </p>
                   </div>
                 </div>
@@ -190,13 +190,10 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                   <div className="flex flex-col gap-4">
                     <button
                       onClick={onOpenProtocol}
-                      className="group relative h-16 px-10 flex items-center gap-4 overflow-hidden rounded-lg border-2 border-accent/40 backdrop-blur-sm shadow-xl transition-all duration-500 hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
-                      style={{
-                        backgroundColor: 'rgba(var(--color-accent-rgb), 0.8)',
-                      }}
+                      className="group relative h-16 px-10 flex items-center gap-4 overflow-hidden rounded-lg bg-accent hover:bg-accent/90 shadow-xl shadow-accent/25 transition-all duration-500 hover:shadow-accent/40 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-                      <span className="relative z-20 uppercase tracking-[0.2em] text-xs font-bold text-white">Secure Your Slot</span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+                      <span className="relative z-20 uppercase tracking-[0.2em] text-xs font-bold text-white font-sans">Secure Your Slot</span>
                       <ArrowRight className="relative z-20 w-4 h-4 group-hover:translate-x-2 transition-all duration-500 text-white" />
                     </button>
 
@@ -241,15 +238,20 @@ const Hero: React.FC<HeroProps> = ({ onOpenProtocol }) => {
                   <Activity size={20} className="animate-pulse" />
                 </div>
 
-                <div className="flex items-start gap-5 mb-8">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all">
-                    <ShieldCheck size={35} />
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all flex-shrink-0">
+                    <ShieldCheck size={28} />
                   </div>
                   <div>
                     <h4 className="text-themed mb-3 font-sans text-xl font-semibold italic">Human Intelligence</h4>
-                    <p className="text-themed-secondary font-sans text-lg leading-relaxed">
-                      We are a boutique firm of people, not software. We learn your voice and preferences, and the rhythm of your business.
+                    <p className="text-themed-secondary font-sans text-base leading-relaxed mb-4">
+                      We are a boutique firm of people, not software. We learn your voice, your preferences, and the rhythm of your business.
                     </p>
+                    <div className="flex items-center gap-3 text-[10px] uppercase tracking-widest text-accent font-bold font-sans">
+                      <span>Since 2008</span>
+                      <span className="text-themed-muted">&bull;</span>
+                      <span>100% Human-Led</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>

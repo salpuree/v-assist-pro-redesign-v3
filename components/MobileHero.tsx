@@ -121,7 +121,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
         >
           <Sparkles size={14} className="animate-pulse text-accent" />
           <span className="tracking-[2px] text-[9px] font-bold text-accent font-sans uppercase text-center">
-            Customer Communications & Executive Operations, Handled
+            Executive Operations & Client Communications, Handled
           </span>
         </motion.div>
 
@@ -151,13 +151,13 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
         >
           <div className="text-themed-secondary text-center font-sans text-base leading-relaxed">
             <p className="mb-4">
-              Whether you run a limo fleet, manage a family office, or close million-dollar deals, one problem persists: <span className="font-semibold italic">operational noise drowns out what matters.</span>
+              Whether you run a luxury fleet, manage a family office, or close million-dollar deals, one problem persists: <span className="font-semibold italic">operational noise drowns out what matters.</span>
             </p>
             <p className="text-accent font-bold uppercase tracking-widest text-[10px] mb-4">
-              Save 15+ hours/week • Reduce operational noise by 70%
+              Save 15+ hours/week &bull; Reduce operational noise by 70%
             </p>
             <p>
-              We handle your customer communications and operational coordination so you can stay focused on growth and strategy.
+              We deploy dedicated human partners who own your communications and operations -- so you stay focused on growth and strategy.
             </p>
           </div>
         </motion.div>
@@ -168,12 +168,9 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           onClick={onOpenProtocol}
-          className="group relative w-full px-8 py-4 flex items-center justify-center gap-3 overflow-hidden rounded-lg border-2 border-accent/40 backdrop-blur-sm shadow-lg transition-all duration-500 hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)] mb-4"
-          style={{
-            backgroundColor: 'rgba(var(--color-accent-rgb), 0.7)',
-          }}
+          className="group relative w-full px-8 py-4 flex items-center justify-center gap-3 overflow-hidden rounded-lg bg-accent hover:bg-accent/90 shadow-lg shadow-accent/25 transition-all duration-500 hover:shadow-accent/40 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent mb-4"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
           <span className="relative z-20 uppercase tracking-[0.15em] text-xs font-bold text-white font-sans">
             Secure Your Slot
           </span>

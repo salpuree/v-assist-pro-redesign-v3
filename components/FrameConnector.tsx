@@ -78,7 +78,7 @@ const FrameConnector: React.FC = () => {
       {/* Traveling light pulse along the path */}
       <circle r="3" fill="url(#pulse-glow)" opacity="0">
         <animateMotion
-          dur="6s"
+          dur="12s"
           repeatCount="indefinite"
           begin="0s"
         >
@@ -89,7 +89,7 @@ const FrameConnector: React.FC = () => {
           attributeName="opacity"
           values="0;0;0.9;0.9;0"
           keyTimes="0;0.05;0.15;0.85;1"
-          dur="6s"
+          dur="12s"
           repeatCount="indefinite"
         />
       </circle>
@@ -97,7 +97,7 @@ const FrameConnector: React.FC = () => {
       {/* Larger soft glow that follows the same path (halo behind the dot) */}
       <circle r="12" fill="url(#pulse-glow)" opacity="0">
         <animateMotion
-          dur="6s"
+          dur="12s"
           repeatCount="indefinite"
           begin="0s"
         >
@@ -107,7 +107,7 @@ const FrameConnector: React.FC = () => {
           attributeName="opacity"
           values="0;0;0.35;0.35;0"
           keyTimes="0;0.05;0.15;0.85;1"
-          dur="6s"
+          dur="12s"
           repeatCount="indefinite"
         />
       </circle>

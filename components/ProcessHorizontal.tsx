@@ -62,12 +62,12 @@ const ProcessHorizontal: React.FC = () => {
                 <CircleDot className="animate-pulse" size={32} />
               </div>
               <div className="text-xl md:text-4xl font-light leading-relaxed mb-6 text-themed font-sans">
-                <span>Talent is a variable. </span>
+                <span>Talent is a variable.</span>
                 <br />
                 <span className="italic text-accent">Infrastructure is a constant.</span>
               </div>
               <p className="text-lg text-themed-secondary font-light leading-relaxed font-sans">
-                We replace hero-dependency with the <span className="text-themed font-medium">Ghost Engine</span>—a custom-engineered system of elite personnel and human-led protocols that converts administrative friction into scalable assets.
+                We replace hero-dependency with the <span className="text-themed font-medium">Ghost Engine</span> -- a bespoke system of elite human partners and operational protocols that converts daily friction into scalable, institutional quiet.
               </p>
               <div className="mt-12 flex items-center gap-4 text-[10px] font-mono tracking-[0.4em] text-accent font-bold">
                 <span>SCROLL TO EXPLORE ARCHITECTURE</span>

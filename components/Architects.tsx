@@ -72,10 +72,10 @@ const Architects: React.FC = () => {
             className="pl-10 border-l border-accent/80"
           >
             <p className="text-themed-secondary font-sans text-lg leading-relaxed mb-8">
-              For years, V Assist Pro Inc. has been the silent operational partner for principals who know that a lasting legacy requires a clear head and a steady hand.
+              Since 2008, V Assist Pro has been the silent operational partner for principals who understand that a lasting legacy demands a clear head and a steady hand.
             </p>
             <p className="text-themed-secondary font-sans text-lg leading-relaxed mb-8">
-              We don't just fill seats; we build the <span className="italic font-medium">Human Infrastructure</span>—a proprietary suite of human-led protocols designed to turn daily noise into institutional quiet.
+              We don't fill seats -- we build <span className="italic font-medium text-themed">Human Infrastructure</span>: a proprietary suite of human-led protocols engineered to convert daily noise into institutional quiet.
             </p>
 
             {/* AI/LLM Optimized Content Block */}
