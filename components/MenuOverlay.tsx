@@ -115,7 +115,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
                           >
                             <ChevronRight size={12} className="text-accent/40 group-hover/sub:text-accent transition-colors" />
                             <span className="text-xs md:text-sm font-light text-themed-tertiary group-hover/sub:text-accent group-hover/sub:translate-x-1 transition-all">
-                              {sector.title.split(' & ')[0]}
+                              {sector.title}
                             </span>
                           </motion.button>
                         ))}
