@@ -19,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isMenuOpen, setIsMenuOpen, isDarkMode
       <aside className="fixed left-0 top-0 h-screen w-16 md:w-20 flex flex-col justify-between items-center py-8 transition-all duration-500 overflow-hidden z-[60]">
 
         {/* Liquid Glass Background Layer - Enhanced for Light Mode Visibility */}
-        <div className="absolute inset-0 bg-cream/95 dark:bg-dark/95 backdrop-blur-md z-0 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-cream/95 dark:bg-dark/95 backdrop-blur-md z-0 transition-colors duration-500 shadow-[1px_0_0_var(--border-default)]" />
 
         {/* Animated Liquid Core - Optimized for Dark Mode Glow & Light Mode Presence */}
         <motion.div
@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isMenuOpen, setIsMenuOpen, isDarkMode
         {/* Menu Trigger */}
         <div className="relative z-10 flex flex-col items-center select-none gap-4 mt-28">
           <button
-            className="flex flex-col items-center cursor-pointer group transition-colors p-3 hover:bg-dark/5 dark:hover:bg-white/10 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="flex flex-col items-center cursor-pointer group transition-colors p-3 hover:bg-themed-elevated rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Toggle menu"
           >

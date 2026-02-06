@@ -47,7 +47,7 @@ const IndustrySelector: React.FC<IndustrySelectorProps> = ({ onSelectSector }) =
               >
                 <button
                   onClick={() => onSelectSector(sector.id)}
-                  className="w-full text-left bg-themed-secondary border border-themed shadow-themed-card p-10 md:p-20 flex flex-col md:flex-row gap-16 items-center transition-all duration-700 hover:border-accent hover:scale-[1.01] relative overflow-hidden group/card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="w-full text-left bg-themed-secondary border border-themed shadow-themed-card p-10 md:p-20 flex flex-col md:flex-row gap-16 items-center transition-all duration-700 hover:border-accent hover:scale-[1.01] hover:shadow-themed-elevated relative overflow-hidden group/card focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <div className="absolute inset-0 bg-themed-secondary opacity-100 z-0" />
 

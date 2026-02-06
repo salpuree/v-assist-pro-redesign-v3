@@ -73,7 +73,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({ onOpenProtocol }) => 
                             {/* Close Button */}
                             <button
                                 onClick={closePopup}
-                                className="absolute top-6 right-6 p-3 hover:bg-dark/5 dark:hover:bg-white/10 rounded-lg transition-colors z-50 pointer-events-auto cursor-pointer"
+                                className="absolute top-6 right-6 p-3 hover:bg-themed-elevated rounded-lg transition-colors z-50 pointer-events-auto cursor-pointer"
                                 aria-label="Close modal"
                                 type="button"
                             >

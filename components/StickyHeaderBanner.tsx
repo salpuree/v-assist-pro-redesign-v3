@@ -16,7 +16,7 @@ const StickyHeaderBanner: React.FC<StickyHeaderBannerProps> = ({ isDarkMode, onO
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-[60] bg-cream/95 dark:bg-dark/95 backdrop-blur-md transition-colors duration-500 hidden md:block"
+      className="fixed top-0 left-0 right-0 z-[60] bg-cream/95 dark:bg-dark/95 backdrop-blur-md transition-colors duration-500 hidden md:block shadow-[0_1px_0_var(--border-default)]"
     >
       <div className="w-full h-16 md:h-20 flex items-center relative px-4 md:px-6 md:pl-[84px]">
         {/* Left - Logo & Est (offset right to clear the sidebar) */}

@@ -62,7 +62,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 right-0 z-40 px-4 py-3 cursor-pointer group border-b border-dark/5 dark:border-white/5 backdrop-blur-md bg-cream/70 dark:bg-dark/80"
+        className="fixed top-0 left-0 right-0 z-40 px-4 py-3 cursor-pointer group border-b border-themed backdrop-blur-md bg-cream/90 dark:bg-dark/90"
       >
         <div className="flex flex-col gap-2">
           {/* Top row - Logo and JOIN NOW */}
@@ -86,7 +86,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
 
             {/* Right side - Hamburger menu */}
             <button
-              className="flex flex-col gap-1 items-end p-2 hover:bg-dark/5 dark:hover:bg-white/10 rounded transition-colors"
+              className="flex flex-col gap-1 items-end p-2 hover:bg-themed-elevated rounded transition-colors"
               onClick={() => setIsMenuOpen?.(true)}
               aria-label="Toggle menu"
             >
@@ -104,7 +104,7 @@ const MobileHero: React.FC<MobileHeroProps> = ({ onOpenProtocol, isMenuOpen = fa
                 Exclusive Onboarding
               </span>
             </div>
-            <div className="w-px h-3 bg-dark/20 dark:bg-white/20" />
+            <div className="w-px h-3 bg-themed-elevated" />
             <CountdownTimer compact={true} />
           </div>
         </div>

@@ -52,9 +52,9 @@ const ProcessHorizontal: React.FC = () => {
 
             {/* Spinning Schematic Element */}
             <div className="absolute left-[20%] top-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.05] dark:opacity-10">
-              <div className="absolute inset-0 border border-dark dark:border-white rounded-full animate-[spin_20s_linear_infinite]" />
-              <div className="absolute inset-4 border border-dashed border-dark dark:border-white rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-              <div className="absolute inset-12 border border-dark/50 dark:border-white/50 rounded-full animate-[spin_30s_linear_infinite]" />
+              <div className="absolute inset-0 border border-themed rounded-full animate-[spin_20s_linear_infinite]" />
+              <div className="absolute inset-4 border border-dashed border-themed rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+              <div className="absolute inset-12 border border-themed-subtle rounded-full animate-[spin_30s_linear_infinite]" />
             </div>
 
             <div className="max-w-2xl relative z-10">
@@ -85,8 +85,8 @@ const ProcessHorizontal: React.FC = () => {
                 {/* Visual "Node" Graphic */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none">
                   <div className="absolute inset-0 bg-accent/5 rounded-full blur-[120px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-full bg-gradient-to-b from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-px bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
 
                 <div className="relative z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -103,9 +103,9 @@ const ProcessHorizontal: React.FC = () => {
                       className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center"
                     >
                       {/* Animated Rings */}
-                      <div className="absolute inset-0 border border-white/5 rounded-full" />
+                      <div className="absolute inset-0 border border-themed-subtle rounded-full" />
                       <div className="absolute inset-4 border border-accent/20 rounded-full group-hover:border-accent/50 transition-colors duration-500" />
-                      <div className="absolute inset-8 border border-white/5 rounded-full animate-slow-spin" />
+                      <div className="absolute inset-8 border border-themed-subtle rounded-full animate-slow-spin" />
 
                       {/* Floating Icon */}
                       <div className="relative z-20 w-24 h-24 bg-themed border border-themed rounded-3xl flex items-center justify-center text-accent shadow-2xl shadow-accent/20 group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-500">
@@ -114,7 +114,7 @@ const ProcessHorizontal: React.FC = () => {
 
                       {/* Pulsing Dots */}
                       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_10px_rgba(0,95,115,1)]" />
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-white/20 rounded-full" />
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-themed-faint rounded-full" />
                     </motion.div>
                   </div>
 

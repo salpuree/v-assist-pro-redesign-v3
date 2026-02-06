@@ -12,13 +12,7 @@ interface MenuOverlayProps {
   onSelectSector?: (id: number) => void;
 }
 
-const links = [
-  { name: "Home", number: "00", id: "home" },
-  { name: "Verticals", number: "01", id: "verticals" },
-  { name: "How It Works", number: "02", id: "methodology" },
-  { name: "Operations Hub", number: "03", id: "integrations" },
-  { name: "Evidence", number: "04", id: "evidence" },
-];
+
 
 const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, onOpenProtocol, onHomeClick }) => {
   const handleScroll = (id: string) => {
@@ -65,7 +59,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 left-0 bottom-0 w-[60%] md:w-[40%] lg:w-[35%] min-w-[350px] z-[60] flex flex-col bg-white/80 dark:bg-black/60 backdrop-blur-3xl shadow-[20px_0_100px_rgba(0,0,0,0.2)] dark:shadow-[80px_0_120px_rgba(0,0,0,0.6)] border-r border-white/20 dark:border-white/10 overflow-hidden"
+            className="fixed top-0 left-0 bottom-0 w-[60%] md:w-[40%] lg:w-[35%] min-w-[350px] z-[60] flex flex-col bg-cream/95 dark:bg-dark/90 backdrop-blur-3xl shadow-themed-elevated border-r border-themed overflow-hidden"
           >
             {/* Liquid Background Accents */}
             <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/5 pointer-events-none" />
@@ -89,10 +83,10 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
               <div className="flex flex-col gap-2 md:gap-3 overflow-y-auto no-scrollbar pr-4">
                 {[
                   { name: "Home", number: "00", id: "home" },
-                  { name: "Industries we service", number: "01", id: "industries", isParent: true },
+                  { name: "Industries We Service", number: "01", id: "verticals", isParent: true },
                   { name: "How It Works", number: "02", id: "methodology" },
                   { name: "Operations Hub", number: "03", id: "integrations" },
-                  { name: "FAQs", number: "04", id: "evidence" },
+                  { name: "FAQs", number: "04", id: "faq" },
                 ].map((link, index) => (
                   <div key={link.id} className="flex flex-col">
                     <motion.div
@@ -100,7 +94,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.1 + index * 0.05 }}
                       onClick={() => !link.isParent && handleScroll(link.id)}
-                      className={`group flex items-baseline border-b border-dark/5 dark:border-white/5 pb-2 transition-colors ${!link.isParent ? 'cursor-pointer hover:border-accent/40' : 'mb-2'}`}
+                      className={`group flex items-baseline border-b border-themed-subtle pb-2 transition-colors ${!link.isParent ? 'cursor-pointer hover:border-accent/40' : 'mb-2'}`}
                     >
                       <span className="text-[10px] mr-6 opacity-40 group-hover:text-accent group-hover:opacity-100 transition-all font-bold tracking-widest font-sans">{link.number}</span>
                       <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif italic tracking-tight group-hover:translate-x-2 transition-transform duration-500 group-hover:text-accent">
@@ -120,7 +114,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose, isDarkMode, 
                             className="flex items-center gap-2 group/sub text-left py-0.5"
                           >
                             <ChevronRight size={12} className="text-accent/40 group-hover/sub:text-accent transition-colors" />
-                            <span className="text-xs md:text-sm font-light text-dark/70 dark:text-cream/60 group-hover/sub:text-accent group-hover/sub:translate-x-1 transition-all">
+                            <span className="text-xs md:text-sm font-light text-themed-tertiary group-hover/sub:text-accent group-hover/sub:translate-x-1 transition-all">
                               {sector.title.split(' & ')[0]}
                             </span>
                           </motion.button>

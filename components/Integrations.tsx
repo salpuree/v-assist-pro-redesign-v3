@@ -135,7 +135,7 @@ const Integrations: React.FC = () => {
             <span className="text-[9px] uppercase tracking-widest text-themed-muted font-sans font-bold">Proprietary</span>
           </div>
 
-          <div id="evidence" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {ecosystem.map((app, index) => (
               <motion.div
                 key={app.name}
@@ -146,7 +146,7 @@ const Integrations: React.FC = () => {
                 className="relative group overflow-hidden"
               >
                 <div className="absolute inset-0 bg-accent/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                <div className="relative z-10 bg-dark/[0.03] dark:bg-white/5 p-6 border border-dark/10 dark:border-white/10 hover:border-accent transition-colors flex flex-col justify-between min-h-[200px]">
+                <div className="relative z-10 bg-themed-surface p-6 border border-themed hover:border-accent transition-colors flex flex-col justify-between min-h-[200px]">
                   <div className="flex justify-between items-start mb-4">
                     <div className="p-3 bg-accent/20 rounded-lg text-accent">
                       <app.icon strokeWidth={1} size={28} />

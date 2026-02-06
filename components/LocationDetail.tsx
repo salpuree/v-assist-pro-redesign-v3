@@ -53,23 +53,6 @@ const LocationDetail: React.FC<LocationDetailProps> = ({ location, onBack, onOpe
                                 <span className="italic text-accent">{location.region}.</span>
                             </h1>
 
-                            {/* The provided snippet seems to be trying to insert content here, but it's syntactically incorrect.
-                                Assuming the intent was to replace the description paragraph or add new elements.
-                                Based on the snippet, it looks like it's trying to replace the existing description paragraph
-                                with a new structure that includes an h4 and a p tag, and then the location.description.
-                                This would result in invalid HTML if placed directly as shown.
-                                I will interpret this as an attempt to replace the existing description paragraph
-                                with a new paragraph that has a different text color for light mode.
-                                The snippet provided is:
-                                <h4 className="font-serif text-2xl tracking-wide text-dark dark:text-cream mb-1" style={{ fontFamily: '"Playfair Display", serif' }}>{app.name}</h4>
-                                <p className="text-xs text-gray-900 dark:text-cream/80 leading-relaxed max-w-sm" style={{ fontFamily: 'Lato, sans-serif' }}>{app.desc}</p>
-                                {location.description}
-                                This looks like it's trying to insert content from another component or context (app.name, app.desc).
-                                Given the instruction "Fix contrast... Replace light-gray text with darker shades for light mode",
-                                and the snippet showing `text-gray-900` instead of `text-dark`, I will apply that change to the existing paragraph.
-                                The `h4` and `p` with `app.name` and `app.desc` are not part of the current `LocationDetailProps` and would cause errors.
-                                I will only apply the contrast fix to the existing `p` tag.
-                            */}
                             <p className="text-xl md:text-2xl font-light text-themed-secondary leading-relaxed mb-12 max-w-2xl font-sans">
                                 {location.description}
                             </p>

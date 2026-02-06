@@ -13,7 +13,7 @@ const LogoCarousel: React.FC = () => {
     ];
 
     return (
-        <div className="bg-cream dark:bg-dark py-20 border-y border-dark/5 dark:border-white/5 overflow-hidden">
+        <div className="bg-cream dark:bg-dark py-20 border-y border-themed overflow-hidden">
             <div className="container mx-auto px-6 mb-10">
                 <p className="text-[10px] uppercase tracking-[0.4em] text-accent/60 font-bold text-center">Institutional Trust • Discreet Partners</p>
             </div>
@@ -22,8 +22,8 @@ const LogoCarousel: React.FC = () => {
                 <div className="py-12 animate-marquee whitespace-nowrap flex items-center gap-20">
                     {[...partners, ...partners].map((partner, i) => (
                         <div key={i} className="flex items-center gap-4 group cursor-default">
-                            <partner.icon size={24} className="text-dark/20 dark:text-white/20 group-hover:text-accent transition-colors duration-500" />
-                            <span className="text-2xl font-serif text-dark/10 dark:text-white/10 group-hover:text-dark/40 dark:group-hover:text-white/40 transition-colors duration-500">
+                            <partner.icon size={24} className="text-themed-faint group-hover:text-accent transition-colors duration-500" />
+                            <span className="text-2xl font-serif text-themed-faint group-hover:text-themed-muted transition-colors duration-500">
                                 {partner.name}
                             </span>
                         </div>
@@ -34,8 +34,8 @@ const LogoCarousel: React.FC = () => {
                 <div className="absolute top-0 py-12 animate-marquee2 whitespace-nowrap flex items-center gap-20">
                     {[...partners, ...partners].map((partner, i) => (
                         <div key={i} className="flex items-center gap-4 group cursor-default">
-                            <partner.icon size={24} className="text-dark/20 dark:text-white/20 group-hover:text-accent transition-colors duration-500" />
-                            <span className="text-2xl font-serif text-dark/10 dark:text-white/10 group-hover:text-dark/40 dark:group-hover:text-white/40 transition-colors duration-500">
+                            <partner.icon size={24} className="text-themed-faint group-hover:text-accent transition-colors duration-500" />
+                            <span className="text-2xl font-serif text-themed-faint group-hover:text-themed-muted transition-colors duration-500">
                                 {partner.name}
                             </span>
                         </div>

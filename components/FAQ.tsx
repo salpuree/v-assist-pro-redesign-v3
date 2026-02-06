@@ -11,7 +11,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="evidence" className="bg-cream dark:bg-dark py-32 border-t border-themed transition-colors duration-500">
+    <section id="faq" className="bg-cream dark:bg-dark py-32 border-t border-themed transition-colors duration-500">
       <div className="container mx-auto px-6 max-w-5xl md:pl-28 pb-24">
         <div className="text-left mb-20">
           <h4 className="text-xs uppercase tracking-[0.3em] mb-4 text-accent font-bold font-sans">Operational Intelligence</h4>

@@ -15,8 +15,8 @@ const SectorStack: React.FC = () => {
     <section className="bg-cream dark:bg-dark py-20 pl-20 md:pl-28 relative transition-colors duration-500">
 
       {/* Decorative large circle background */}
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full border border-dark/5 dark:border-white/5 pointer-events-none z-0" />
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border border-dark/5 dark:border-white/5 pointer-events-none z-0" />
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full border border-themed-subtle pointer-events-none z-0" />
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border border-themed-subtle pointer-events-none z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
 
@@ -92,7 +92,7 @@ const SectorStack: React.FC = () => {
                       <span className="text-accent font-bold">Deploy Protocol</span>
                       <div className="w-8 h-[1px] bg-current opacity-30"></div>
                       <span className="opacity-50 text-[10px] ml-auto">REF: {sector.ref}</span>
-                      <div className="border border-dark dark:border-white rounded-full p-2">
+                      <div className="border border-themed rounded-full p-2">
                         <ArrowRight size={14} />
                       </div>
                     </div>
@@ -102,9 +102,9 @@ const SectorStack: React.FC = () => {
                   <div className="relative h-[400px] lg:h-auto flex items-center justify-center">
                     <div className="absolute inset-0 flex items-center justify-center">
                       {/* Concentric Circles */}
-                      <div className="w-[400px] h-[400px] rounded-full border border-dark/10 dark:border-white/10" />
-                      <div className="absolute w-[300px] h-[300px] rounded-full border border-dark/10 dark:border-white/10" />
-                      <div className="absolute w-[500px] h-[500px] rounded-full border border-dark/5 dark:border-white/5" />
+                      <div className="w-[400px] h-[400px] rounded-full border border-themed" />
+                      <div className="absolute w-[300px] h-[300px] rounded-full border border-themed" />
+                      <div className="absolute w-[500px] h-[500px] rounded-full border border-themed-subtle" />
                     </div>
 
                     {/* Central Icon/Graphic */}
@@ -119,7 +119,7 @@ const SectorStack: React.FC = () => {
                 </div>
 
                 {/* Middle: Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-t border-dark/10 dark:border-white/10 pt-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-t border-themed pt-12">
 
                   {/* The Friction */}
                   <div className="lg:col-span-4 space-y-8">

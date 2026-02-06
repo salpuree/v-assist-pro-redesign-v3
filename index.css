@@ -113,27 +113,27 @@
 .light {
   color-scheme: light;
 
-  --fg-primary: #111827;
-  --fg-secondary: rgba(17, 24, 39, 0.85);
-  --fg-tertiary: rgba(17, 24, 39, 0.60);
-  --fg-muted: rgba(17, 24, 39, 0.40);
-  --fg-faint: rgba(17, 24, 39, 0.15);
+  --fg-primary: #0f172a;
+  --fg-secondary: #334155;
+  --fg-tertiary: #64748b;
+  --fg-muted: #94a3b8;
+  --fg-faint: rgba(15, 23, 42, 0.12);
 
   --bg-primary: #faf9f6;
   --bg-secondary: #ffffff;
-  --bg-surface: rgba(0, 0, 0, 0.03);
-  --bg-surface-elevated: rgba(0, 0, 0, 0.05);
-  --bg-surface-hover: rgba(0, 0, 0, 0.08);
+  --bg-surface: rgba(15, 23, 42, 0.04);
+  --bg-surface-elevated: rgba(15, 23, 42, 0.07);
+  --bg-surface-hover: rgba(15, 23, 42, 0.10);
 
-  --border-subtle: rgba(0, 0, 0, 0.06);
-  --border-default: rgba(0, 0, 0, 0.12);
-  --border-strong: rgba(0, 0, 0, 0.20);
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-default: rgba(15, 23, 42, 0.15);
+  --border-strong: rgba(15, 23, 42, 0.25);
 
-  --glass-bg: rgba(255, 255, 255, 0.80);
-  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(250, 249, 246, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.12);
 
-  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.06);
-  --shadow-elevated: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 20px 40px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-elevated: 0 10px 30px rgba(15, 23, 42, 0.12), 0 2px 8px rgba(15, 23, 42, 0.06);
 }
 
 /* ===================================
@@ -164,6 +164,11 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
+}
+
+/* Light mode specific: strengthen glass panel visibility */
+.light .glass-panel {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
 }
 
 /* Shadow utilities */
@@ -217,11 +222,55 @@ button, a, [role="button"] {
 }
 
 /* ===================================
+   LIGHT MODE VISUAL ENHANCEMENTS
+   =================================== */
+
+/* Subtle noise texture on light mode sections for visual depth */
+.light section {
+  position: relative;
+}
+
+.light section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Prevent noise on sections that already have rich backgrounds */
+.light footer::before {
+  display: none;
+}
+
+/* Enhanced light mode accent color vibrancy */
+.light .text-accent {
+  color: #0d97cc;
+}
+
+.light .bg-accent {
+  background-color: #0d97cc;
+}
+
+.light .border-accent {
+  border-color: #0d97cc;
+}
+
+/* ===================================
    MOBILE PERFORMANCE
    =================================== */
 @media (max-width: 640px) {
   .glass-panel {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+  }
+
+  /* Disable noise texture on mobile for performance */
+  .light section::before {
+    display: none;
   }
 }

@@ -22,7 +22,7 @@ const Architects: React.FC = () => {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="0.75"
-                className="text-dark/[0.12] dark:text-white/[0.12]"
+                className="text-themed-faint"
               />
 
               {/* Star Core - Subtle Node */}
